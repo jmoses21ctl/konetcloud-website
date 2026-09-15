@@ -9,7 +9,7 @@ const utility = [
   { label: "Service status", href: site.links.status },
   { label: "Contact sales", href: site.links.sales },
   { label: "Support", href: "/support" },
-  { label: "Console", href: site.links.console },
+  { label: "Get started", href: site.links.console },
 ];
 
 const legal = [
@@ -34,7 +34,7 @@ export function Footer() {
             workloads.
           </p>
           <p className="font-mono text-[11px] text-paper-3">
-            A{" "}
+            Powered by{" "}
             <a
               href={site.parent.url}
               target="_blank"
@@ -42,8 +42,7 @@ export function Footer() {
               className="text-paper-2 underline-offset-4 transition-colors hover:text-paper hover:underline"
             >
               {site.parent.name}
-            </a>{" "}
-            company
+            </a>
           </p>
           <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1.5">
             {utility.map((u) => (
@@ -90,7 +89,16 @@ export function Footer() {
       <div className="border-t border-line">
         <div className="container-x flex flex-col gap-3 py-5 font-mono text-[11px] text-paper-3 sm:flex-row sm:items-center sm:justify-between">
           <span>
-            © {new Date().getFullYear()} {site.name}. Lagos, Nigeria.
+            © {new Date().getFullYear()} {site.name}. Lagos, Nigeria. Powered by{" "}
+            <a
+              href={site.parent.url}
+              target="_blank"
+              rel="noreferrer"
+              className="transition-colors hover:text-paper-2"
+            >
+              {site.parent.name}
+            </a>
+            .
           </span>
           <ul className="flex flex-wrap gap-x-4 gap-y-1">
             {[{ label: "Trust", href: "/trust" }, ...legal].map((l) => (

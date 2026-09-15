@@ -140,13 +140,13 @@ export function MobileNav() {
           <Button
             variant="secondary"
             size="lg"
-            href={site.links.console}
+            href={site.links.sales}
             className="w-full"
           >
-            Open console
-          </Button>
-          <Button size="lg" href={site.links.sales} arrow className="w-full">
             Talk to an expert
+          </Button>
+          <Button size="lg" href={site.links.console} arrow className="w-full">
+            Get started
           </Button>
         </div>
       </div>

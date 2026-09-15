@@ -8,6 +8,7 @@ import { PageHero } from "@/components/ui/page-hero";
 import { Reveal } from "@/components/ui/reveal";
 import { Section } from "@/components/ui/section";
 import { StatusBadge } from "@/components/ui/status-badge";
+import { site } from "@/lib/site";
 import type { ServiceStatus } from "@/lib/status";
 
 export const metadata: Metadata = {
@@ -25,7 +26,7 @@ const resources: { title: string; description: string; href: string; status: Ser
 ];
 
 const developer = [
-  { title: "Console", description: "Sign-in, getting-started path and project administration.", href: "/console", status: "coming-soon" as ServiceStatus },
+  { title: "Console", description: "Sign in to provision and manage cloud infrastructure.", href: site.links.console, status: "ga" as ServiceStatus },
   { title: "API", description: "Authentication, endpoints, examples, errors, quotas and versioning.", href: "/resources/api", status: "coming-soon" as ServiceStatus },
   { title: "CLI", description: "Installation, authentication, command reference and examples.", href: "/resources/cli", status: "coming-soon" as ServiceStatus },
   { title: "SDKs", description: "Supported languages, installation, examples and version policy.", href: "/resources/sdks", status: "coming-soon" as ServiceStatus },

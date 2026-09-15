@@ -13,7 +13,7 @@ export const site = {
     url: "https://www.21ctl.com",
   },
   links: {
-    console: "/console",
+    console: "https://prebol.crelpc.com/login",
     docs: "/resources/documentation",
     status: "/resources/status",
     contact: "/contact",

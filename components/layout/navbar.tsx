@@ -21,11 +21,11 @@ export function Navbar() {
         </ul>
 
         <div className="hidden items-center gap-2 xl:flex">
-          <Button variant="ghost" size="sm" href={site.links.console}>
-            Console
-          </Button>
-          <Button size="sm" href={site.links.sales} arrow>
+          <Button variant="ghost" size="sm" href={site.links.sales}>
             Talk to an expert
+          </Button>
+          <Button size="sm" href={site.links.console} arrow>
+            Get started
           </Button>
         </div>
 
