@@ -7,6 +7,8 @@ type Props = {
   title: string;
   lede?: string;
   children?: React.ReactNode;
+  /** Right-hand illustration; renders beside the copy from lg up. */
+  visual?: React.ReactNode;
   align?: "left" | "center";
   className?: string;
 };
@@ -20,6 +22,7 @@ export function PageHero({
   title,
   lede,
   children,
+  visual,
   align = "left",
   className,
 }: Props) {
@@ -36,7 +39,13 @@ export function PageHero({
       />
       <div
         className={cn(
-          "container-x flex flex-col gap-5",
+          "container-x",
+          visual && "grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-6",
+        )}
+      >
+      <div
+        className={cn(
+          "flex flex-col gap-5",
           align === "center" && "items-center text-center",
         )}
       >
@@ -68,6 +77,15 @@ export function PageHero({
             {children}
           </div>
         )}
+      </div>
+      {visual && (
+        <div
+          className="rise relative -mx-4 lg:mx-0"
+          style={{ "--i": 2, "--d": "160ms" } as React.CSSProperties}
+        >
+          {visual}
+        </div>
+      )}
       </div>
     </section>
   );

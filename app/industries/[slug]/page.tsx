@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import { Illustration } from "@/components/illustrations";
 import { PageShell } from "@/components/layout/page-shell";
 import { CallToAction } from "@/components/sections/cta";
 import { Button } from "@/components/ui/button";
@@ -37,6 +38,7 @@ export default async function IndustryPage({ params }: { params: Promise<Params>
         eyebrow={<Crumb items={[{ label: "Industries", href: "/industries" }, { label: ind.name }]} />}
         title={ind.name}
         lede={ind.copy}
+        visual={<Illustration scene={ind.families[0]} />}
       >
         <Button href={site.links.sales} arrow>Talk to an expert</Button>
         <Button variant="secondary" href="/trust">Trust and compliance</Button>

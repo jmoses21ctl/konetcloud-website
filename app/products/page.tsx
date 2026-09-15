@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { Illustration } from "@/components/illustrations";
 import { PageShell } from "@/components/layout/page-shell";
 import { CallToAction } from "@/components/sections/cta";
 import { Button } from "@/components/ui/button";
@@ -23,6 +24,7 @@ export default function ProductsPage() {
         eyebrow={<Crumb items={[{ label: "Products" }]} />}
         title="One platform, eight product families"
         lede="Every service shares the same network, identity model, console and bill. Start from the family that matches your workload."
+        visual={<Illustration scene="platform" />}
       >
         <Button href={site.links.console} arrow>
           Launch in console

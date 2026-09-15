@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { Illustration } from "@/components/illustrations";
 import { PageShell } from "@/components/layout/page-shell";
 import { CallToAction } from "@/components/sections/cta";
 import { Crumb } from "@/components/ui/crumb";
@@ -20,6 +21,7 @@ export default function IndustriesPage() {
         eyebrow={<Crumb items={[{ label: "Industries" }]} />}
         title="Built around how each sector actually operates"
         lede="Workload examples, relevant product families, and the availability, residency and operational considerations that matter to your sector."
+        visual={<Illustration scene="platform" />}
       />
       <section className="bg-ink pb-24">
         <div className="container-x">

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { Illustration } from "@/components/illustrations";
 import { PageShell } from "@/components/layout/page-shell";
 import { CallToAction } from "@/components/sections/cta";
 import { Button } from "@/components/ui/button";
@@ -30,6 +31,7 @@ export default function SupportPage() {
         eyebrow={<Crumb items={[{ label: "Support" }]} />}
         title="Clear technical and commercial support routes"
         lede="Every support plan defines its contact channels, coverage hours, response targets, escalation path and included services. Plans are published once their operating model is confirmed."
+        visual={<Illustration scene="management" />}
       >
         <Button href="/contact?topic=support" arrow>Contact support</Button>
         <Button variant="secondary" href={site.links.status}>Service status</Button>

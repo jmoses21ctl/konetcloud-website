@@ -429,3 +429,54 @@
     transform: none;
   }
 }
+
+/* Isometric hero illustrations */
+.iso-scene svg {
+  width: 100%;
+  height: auto;
+  overflow: hidden; /* floor grid extends past the viewBox by design */
+}
+.iso-scene {
+  animation: iso-drift 9s ease-in-out infinite;
+}
+.iso-float {
+  animation: iso-float 6s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.iso-float-2 {
+  animation-delay: -3s;
+}
+.iso-led {
+  animation: iso-led 2.4s ease-in-out infinite;
+}
+@keyframes iso-drift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes iso-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+@keyframes iso-led {
+  50% {
+    opacity: 0.3;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .iso-scene,
+  .iso-float,
+  .iso-led {
+    animation: none;
+  }
+}

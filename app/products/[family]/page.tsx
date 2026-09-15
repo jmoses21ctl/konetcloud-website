@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { Illustration } from "@/components/illustrations";
 import { PageShell } from "@/components/layout/page-shell";
 import { ArchitectureDiagram } from "@/components/sections/architecture";
 import { CallToAction } from "@/components/sections/cta";
@@ -49,6 +50,7 @@ export default async function ProductFamilyPage({
         eyebrow={<Crumb items={[{ label: "Products", href: "/products" }, { label: f.name }]} />}
         title={f.headline}
         lede={f.lede}
+        visual={<Illustration scene={f.slug} />}
       >
         <Button href={`/pricing/${f.slug === "ai-gpu" ? "gpu" : f.slug}`} arrow>
           View pricing

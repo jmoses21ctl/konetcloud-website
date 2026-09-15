@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { Illustration } from "@/components/illustrations";
 import { PageShell } from "@/components/layout/page-shell";
 import { ArchitectureDiagram } from "@/components/sections/architecture";
 import { CallToAction } from "@/components/sections/cta";
@@ -24,6 +25,7 @@ export default function TrustPage() {
         eyebrow={<Crumb items={[{ label: "Trust" }]} />}
         title="Trust KonetCloud with critical workloads"
         lede="A clear, evidence-based view of where services operate, how resilience is designed, how responsibilities are divided, and which standards or certifications have been achieved."
+        visual={<Illustration scene="security" />}
       >
         <Button href={site.links.status} arrow>Service status</Button>
         <Button variant="secondary" href={site.links.sales}>Request controlled evidence</Button>

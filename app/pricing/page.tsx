@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { Illustration } from "@/components/illustrations";
 import { PageShell } from "@/components/layout/page-shell";
 import { CallToAction } from "@/components/sections/cta";
 import { Button } from "@/components/ui/button";
@@ -26,6 +27,7 @@ export default function PricingPage() {
         eyebrow={<Crumb items={[{ label: "Pricing" }]} />}
         title="Choose the resources you need and scale as requirements change"
         lede="Estimate cost before deployment and understand what is included, what is metered and what may generate additional charges."
+        visual={<Illustration scene="management" />}
       >
         <Button href={site.links.sales} arrow>Request enterprise pricing</Button>
         <Button variant="secondary" href="/pricing/cost-guidance">Cost guidance</Button>
@@ -50,7 +52,7 @@ export default function PricingPage() {
         </Reveal>
       </Section>
 
-      <Section index="02" eyebrow="Models" title="Five ways to buy" description="Clearly distinguished wherever they apply.">
+      <Section index="02" eyebrow="Models" title="Many ways to buy" description="Clearly distinguished wherever they apply.">
         <Reveal as="ul" variant="up" className="grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-5">
           {pricingModels.map((m, i) => (
             <li key={m.name} className="stagger flex flex-col gap-2 bg-ink p-5" style={{ "--i": i } as React.CSSProperties}>

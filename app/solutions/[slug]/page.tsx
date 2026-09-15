@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import { Illustration, solutionScene } from "@/components/illustrations";
 import { PageShell } from "@/components/layout/page-shell";
 import { CallToAction } from "@/components/sections/cta";
 import { Button } from "@/components/ui/button";
@@ -35,6 +36,7 @@ export default async function SolutionPage({ params }: { params: Promise<Params>
         eyebrow={<Crumb items={[{ label: "Solutions", href: "/solutions" }, { label: s.name }]} />}
         title={s.headline}
         lede={s.copy}
+        visual={<Illustration scene={solutionScene[s.slug] ?? s.families[0]} />}
       >
         <Button href={site.links.sales} arrow>
           Talk to an expert

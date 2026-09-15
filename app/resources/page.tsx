@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { Illustration } from "@/components/illustrations";
 import { PageShell } from "@/components/layout/page-shell";
 import { CallToAction } from "@/components/sections/cta";
 import { Crumb } from "@/components/ui/crumb";
@@ -39,6 +40,7 @@ export default function ResourcesPage() {
         eyebrow={<Crumb items={[{ label: "Resources" }]} />}
         title="Build on KonetCloud"
         lede="Direct access to the tools and guidance required to provision, automate and operate infrastructure. Destinations are reserved from the first release and opened as documentation is ready."
+        visual={<Illustration scene="containers" />}
       />
       <Section index="01" eyebrow="Resources" title="Evaluate, design, implement">
         <Reveal as="ul" variant="up" className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
