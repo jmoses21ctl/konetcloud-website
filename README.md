@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# KonetCloud — Marketing Site
 
-## Getting Started
+Public website for [KonetCloud](https://konetcloud.com), the cloud platform from 21st Century Technologies. Built to the *Website Content and Information Architecture* brief (15 Sep 2026).
 
-First, run the development server:
+## Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Next.js 16** (App Router, React Server Components, static generation)
+- **TypeScript** (strict)
+- **Tailwind CSS v4** — design tokens live in [`app/globals.css`](app/globals.css) under `@theme`
+- **next/font** — Plus Jakarta Sans (display/body) + JetBrains Mono (labels, numerals)
+
+## Structure
+
+```
+app/
+  page.tsx                Homepage
+  products/[family]       8 product families (static)
+  solutions/[slug]        7 solutions (static)
+  industries/[slug]       6 industries (static)
+  pricing, trust, support, resources, contact
+  [...slug]               Catch-all "in progress" page for linked-but-unbuilt routes
+components/
+  brand/                  Logo + logomark
+  layout/                 Navbar (dropdowns), mobile nav, header chrome, footer, page shell
+  sections/               Homepage sections, architecture visual, hero network canvas
+  ui/                     Button, Reveal, SectionHeading, PageHero, LinkCard, ServiceTable, StatusBadge, …
+lib/
+  site.ts                 Brand strings, navigation
+  products.ts             Product families + services + publication status
+  solutions.ts, industries.ts, trust.ts, pricing.ts
+  status.ts               Service status vocabulary (Available / Preview / Coming soon)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Content controls (from the brief)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Service status** is data (`lib/products.ts`). Every status is a placeholder pending product-owner sign-off — see the comment at the top of the file.
+- **No unsupported claims**: no uptime %, latency numbers, certifications, "largest/fastest" language or price comparisons. Prices are not published; `lib/pricing.ts` describes models and categories only.
+- **Sovereignty wording** is fixed in `lib/trust.ts` (`sovereigntyWording`).
+- **Architecture visual** (`components/sections/architecture.tsx`) is logical only: three peer zones, redundant paths, layers. No topology.
+- **Contact form** validates server-side; delivery is a stub in `app/contact/actions.ts` — wire to CRM/ticketing before launch.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Develop
 
-## Learn More
+```bash
+pnpm install
+pnpm dev
+```
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`pnpm build` runs the full static build; `pnpm lint` and `pnpm exec tsc --noEmit` for checks.
