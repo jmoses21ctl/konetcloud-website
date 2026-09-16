@@ -25,7 +25,7 @@ export function Section({
   align,
 }: Props) {
   return (
-    <section id={id} className={cn("relative bg-ink py-16 md:py-24", className)}>
+    <section id={id} className={cn("relative bg-surface py-16 md:py-24", className)}>
       <div className="container-x">
         <Reveal variant={align === "center" ? "up" : "left"}>
           <SectionHeading

@@ -1,4 +1,5 @@
 import { KonetMark } from "@/components/brand/logo";
+import { GoldenBackdrop } from "@/components/sections/golden-backdrop";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
 import { site } from "@/lib/site";
@@ -20,20 +21,19 @@ export function CallToAction({
   secondary = { label: "Talk to an expert", href: site.links.sales },
 }: Props) {
   return (
-    <section className="relative bg-ink pb-24 md:pb-32">
+    <section className="relative bg-surface pb-24 md:pb-32">
       <div className="container-x">
         <Reveal
           variant="pop"
-          className="relative isolate overflow-hidden rounded-3xl border border-line bg-ink-2 px-6 py-16 text-center sm:px-12 md:py-24"
+          className="elevated relative isolate overflow-hidden rounded-3xl px-6 py-16 text-center sm:px-12 md:py-24"
         >
+          <GoldenBackdrop className="-z-20" />
           <KonetMark
-            id="cta-mark"
-            className="animate-float absolute -right-16 -bottom-24 -z-10 size-[22rem] opacity-[0.07] md:-right-8 md:size-[30rem]"
+            className="animate-float absolute -right-16 -bottom-24 -z-10 w-[18rem] opacity-[0.16] md:-right-4 md:w-[24rem]"
           />
-          <div className="absolute inset-x-12 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent" />
 
           <p
-            className="stagger font-mono text-[11.5px] tracking-[0.12em] text-brand uppercase"
+            className="stagger font-mono text-[11.5px] tracking-[0.12em] text-fg/70 uppercase"
             style={{ "--i": 0 } as React.CSSProperties}
           >
             {eyebrow}
@@ -46,7 +46,7 @@ export function CallToAction({
           </h2>
           <p
             style={{ "--i": 2 } as React.CSSProperties}
-            className="stagger mx-auto mt-5 max-w-lg text-[15px] leading-relaxed text-paper-2"
+            className="stagger mx-auto mt-5 max-w-lg text-[15px] leading-relaxed text-fg/75"
           >
             {copy}
           </p>

@@ -47,9 +47,9 @@ export default async function IndustryPage({ params }: { params: Promise<Params>
       <Section index="01" eyebrow="Workloads" title="Typical workloads">
         <Reveal as="ul" variant="up" className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {ind.workloads.map((w, i) => (
-            <li key={w} className="stagger-pop rounded-xl border border-line bg-ink-2 p-5" style={{ "--i": i } as React.CSSProperties}>
+            <li key={w} className="stagger-pop rounded-xl border border-line bg-surface-2 p-5" style={{ "--i": i } as React.CSSProperties}>
               <span className="font-mono text-[11px] text-brand">0{i + 1}</span>
-              <p className="mt-2 text-[15px] font-medium text-paper">{w}</p>
+              <p className="mt-2 text-[15px] font-medium text-fg">{w}</p>
             </li>
           ))}
         </Reveal>
@@ -79,7 +79,7 @@ export default async function IndustryPage({ params }: { params: Promise<Params>
           {ind.considerations.map((c, i) => (
             <li key={c} className="stagger flex items-start gap-4 py-4" style={{ "--i": i } as React.CSSProperties}>
               <span className="mt-0.5 font-mono text-[11px] text-brand">0{i + 1}</span>
-              <span className="text-[15px] text-paper-2">{c}</span>
+              <span className="text-[15px] text-fg-2">{c}</span>
             </li>
           ))}
         </Reveal>

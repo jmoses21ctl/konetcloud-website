@@ -6,7 +6,7 @@ Public website for [KonetCloud](https://konetcloud.com), the cloud platform from
 
 - **Next.js 16** (App Router, React Server Components, static generation)
 - **TypeScript** (strict)
-- **Tailwind CSS v4** — design tokens live in [`app/globals.css`](app/globals.css) under `@theme`
+- **Tailwind CSS v4** — design tokens live in [`app/globals.css`](app/globals.css) under `@theme` (light theme matched to the Cloud Console: white surfaces, blue actions, golden atmosphere)
 - **next/font** — Plus Jakarta Sans (display/body) + JetBrains Mono (labels, numerals)
 
 ## Structure
@@ -20,9 +20,9 @@ app/
   pricing, trust, support, resources, contact
   [...slug]               Catch-all "in progress" page for linked-but-unbuilt routes
 components/
-  brand/                  Logo + logomark
+  brand/                  Logo (supplied Konet wordmark + "Cloud") and K mark
   layout/                 Navbar (dropdowns), mobile nav, header chrome, footer, page shell
-  sections/               Homepage sections, architecture visual, hero network canvas
+  sections/               Homepage sections, golden backdrop, architecture visual, hero network canvas
   ui/                     Button, Reveal, SectionHeading, PageHero, LinkCard, ServiceTable, StatusBadge, …
 lib/
   site.ts                 Brand strings, navigation
@@ -47,3 +47,8 @@ pnpm dev
 ```
 
 `pnpm build` runs the full static build; `pnpm lint` and `pnpm exec tsc --noEmit` for checks.
+
+## Theme history
+
+- `dark-theme` branch / `v1-dark-theme` tag — the original black design with the custom cloud logomark (gold accent). Check it out with `git checkout dark-theme`.
+- `light-theme` (current) — light design matched to the Console login: golden hero, white surfaces, blue actions, supplied Konet logo assets in `public/brand/`.

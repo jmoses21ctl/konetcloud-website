@@ -23,7 +23,7 @@ export default function IndustriesPage() {
         lede="Workload examples, relevant product families, and the availability, residency and operational considerations that matter to your sector."
         visual={<Illustration scene="platform" />}
       />
-      <section className="bg-ink pb-24">
+      <section className="bg-surface pb-24">
         <div className="container-x">
           <Reveal as="ul" variant="up" className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {industries.map((ind, i) => (
@@ -31,7 +31,7 @@ export default function IndustriesPage() {
                 <LinkCard href={`/industries/${ind.slug}`} title={ind.name} description={ind.copy} tag={`0${i + 1}`}>
                   <ul className="flex flex-wrap gap-1.5">
                     {ind.workloads.slice(0, 3).map((w) => (
-                      <li key={w} className="rounded-md border border-line bg-ink px-2 py-0.5 font-mono text-[10.5px] text-paper-3">{w}</li>
+                      <li key={w} className="rounded-md border border-line bg-surface px-2 py-0.5 font-mono text-[10.5px] text-fg-3">{w}</li>
                     ))}
                   </ul>
                 </LinkCard>

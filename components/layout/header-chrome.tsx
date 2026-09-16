@@ -27,8 +27,8 @@ export function HeaderChrome({ children }: { children: React.ReactNode }) {
     >
       <div
         className={cn(
-          "absolute inset-0 -z-10 border-b bg-ink/75 backdrop-blur-xl transition-[opacity,border-color] duration-500",
-          scrolled ? "border-line opacity-100" : "border-transparent opacity-0",
+          "absolute inset-0 -z-10 border-b border-line bg-white/85 backdrop-blur-xl transition-[box-shadow] duration-500",
+          scrolled && "shadow-[0_8px_30px_-16px_rgb(16_24_40/0.25)]",
         )}
       />
       {children}

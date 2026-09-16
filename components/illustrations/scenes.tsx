@@ -39,7 +39,7 @@ export function ComputeScene() {
         <Box x={-26} y={-26} z={150} w={52} d={52} h={6} color={K.deep} />
         <Box x={-14} y={-14} z={156} w={28} d={28} h={3} color={K.brand} />
         <Box x={-6} y={-6} z={159} w={12} d={12} h={1.5} color={K.soft} edge={false} />
-        <Led p={[0, 0, 161]} color="#fff" r={1.2} pulse />
+        <Led p={[0, 0, 161]} color={K.gold} r={1.2} pulse />
       </g>
       {/* satellite nodes */}
       <Box x={56} y={-96} w={26} d={26} h={22} color={K.slate} />
@@ -181,7 +181,7 @@ export function AiScene() {
         {[-30, -15, 0, 15, 30].map((v) => (
           <Beam key={v} a={[v, -40, 62]} b={[v, 40, 62]} color={K.soft} opacity={0.3} />
         ))}
-        <Led p={[0, 0, 63]} color="#fff" r={2.2} pulse />
+        <Led p={[0, 0, 63]} color={K.gold} r={2.2} pulse />
       </g>
     </Scene>
   );
@@ -294,10 +294,10 @@ export function SecurityScene() {
       <g className="iso-float">
         <Cylinder id="lock-ring" x={0} y={0} z={78} r={16} h={4} color={K.soft} />
         <Box x={-9} y={-9} z={60} w={18} d={18} h={18} color={K.soft} />
-        <Led p={[0, 0, 83]} color="#fff" r={2} pulse />
+        <Led p={[0, 0, 83]} color={K.gold} r={2} pulse />
       </g>
       {/* denied packet bouncing off the perimeter */}
-      <Beam a={[-190, 40, 10]} b={[-116, 0, 10]} color={K.magenta} opacity={0.5} packet dur={1.8} />
+      <Beam a={[-190, 40, 10]} b={[-116, 0, 10]} color={K.red} opacity={0.5} packet dur={1.8} />
       <Beam a={[190, -40, 10]} b={[116, 0, 10]} color={K.lime} opacity={0.5} packet dur={2.2} delay={0.6} />
     </Scene>
   );
@@ -326,7 +326,7 @@ export function PlatformScene() {
         ))}
       <g className="iso-float">
         <Cylinder id="plat-lb" x={0} y={10} z={110} r={22} h={8} color={K.soft} />
-        <Led p={[0, 10, 119]} color="#fff" r={2} pulse />
+        <Led p={[0, 10, 119]} color={K.gold} r={2} pulse />
       </g>
       {zones.map(([x, y], i) => (
         <Beam key={`u${i}`} a={[0, 10, 110]} b={[x, y, 48]} opacity={0.25} packet dur={2 + i * 0.4} delay={i * 0.5} />

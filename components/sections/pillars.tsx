@@ -27,7 +27,7 @@ const pillars = [
 
 export function Pillars() {
   return (
-    <section id="why" className="relative bg-ink py-24 md:py-32">
+    <section id="why" className="relative bg-surface py-24 md:py-32">
       <div className="container-x">
         <Reveal variant="up">
           <SectionHeading
@@ -46,20 +46,20 @@ export function Pillars() {
           {pillars.map((p, i) => (
             <li
               key={p.title}
-              className="stagger group flex flex-col gap-5 bg-ink p-6 transition-colors duration-500 hover:bg-white/[0.025] sm:p-7"
+              className="stagger group flex flex-col gap-5 bg-surface p-6 transition-colors duration-500 hover:bg-fg/[0.025] sm:p-7"
               style={{ "--i": i } as React.CSSProperties}
             >
-              <span className="flex size-10 items-center justify-center rounded-lg border border-line bg-ink-2 text-paper-2 transition-colors duration-300 group-hover:border-brand/40 group-hover:text-brand">
+              <span className="flex size-10 items-center justify-center rounded-lg border border-line bg-surface-2 text-fg-2 transition-colors duration-300 group-hover:border-brand/40 group-hover:text-brand">
                 <p.icon className="size-5" />
               </span>
               <div className="flex flex-col gap-2">
-                <span className="font-mono text-[10.5px] tracking-[0.12em] text-paper-3 uppercase">
+                <span className="font-mono text-[10.5px] tracking-[0.12em] text-fg-3 uppercase">
                   0{i + 1}
                 </span>
-                <h3 className="text-[16px] font-semibold tracking-[-0.02em] text-paper">
+                <h3 className="text-[16px] font-semibold tracking-[-0.02em] text-fg">
                   {p.title}
                 </h3>
-                <p className="text-[14px] leading-relaxed text-paper-2">{p.copy}</p>
+                <p className="text-[14px] leading-relaxed text-fg-2">{p.copy}</p>
               </div>
             </li>
           ))}

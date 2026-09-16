@@ -103,7 +103,7 @@ export function NavMenu({ item }: { item: NavItem }) {
       >
         <ul
           className={cn(
-            "grid gap-0.5 rounded-xl border border-line bg-ink-2/95 p-1.5 shadow-[0_30px_60px_-20px_rgb(0_0_0/0.8)] backdrop-blur-xl",
+            "grid gap-0.5 rounded-xl border border-line bg-surface-2/95 p-1.5 shadow-[0_24px_60px_-20px_rgb(16_24_40/0.3)] backdrop-blur-xl",
             wide ? "w-[34rem] grid-cols-2" : "w-64",
           )}
         >
@@ -112,13 +112,13 @@ export function NavMenu({ item }: { item: NavItem }) {
               <Link
                 href={c.href}
                 onClick={() => setOpen(false)}
-                className="group/i flex flex-col gap-0.5 rounded-lg px-3 py-2.5 transition-colors hover:bg-white/[0.05]"
+                className="group/i flex flex-col gap-0.5 rounded-lg px-3 py-2.5 transition-colors hover:bg-fg/[0.05]"
               >
-                <span className="text-[13.5px] font-medium text-paper transition-colors group-hover/i:text-brand-soft">
+                <span className="text-[13.5px] font-medium text-fg transition-colors group-hover/i:text-brand-soft">
                   {c.label}
                 </span>
                 {c.description && (
-                  <span className="text-[12px] leading-snug text-paper-3">
+                  <span className="text-[12px] leading-snug text-fg-3">
                     {c.description}
                   </span>
                 )}
@@ -129,7 +129,7 @@ export function NavMenu({ item }: { item: NavItem }) {
             <Link
               href={item.href}
               onClick={() => setOpen(false)}
-              className="flex items-center justify-between rounded-lg px-3 py-2 text-[12.5px] font-medium text-paper-2 transition-colors hover:bg-white/[0.05] hover:text-paper"
+              className="flex items-center justify-between rounded-lg px-3 py-2 text-[12.5px] font-medium text-fg-2 transition-colors hover:bg-fg/[0.05] hover:text-fg"
             >
               All {item.label.toLowerCase()}
               <span aria-hidden="true">→</span>
@@ -151,7 +151,7 @@ function NavLink({
     <Link
       {...props}
       className={cn(
-        "group relative inline-flex h-9 items-center px-3 text-[13.5px] font-medium tracking-[-0.005em] text-paper-2 transition-colors duration-300 hover:text-paper aria-expanded:text-paper",
+        "group relative inline-flex h-9 items-center px-3 text-[13.5px] font-medium tracking-[-0.005em] text-fg-2 transition-colors duration-300 hover:text-fg aria-expanded:text-fg",
         className,
       )}
     >

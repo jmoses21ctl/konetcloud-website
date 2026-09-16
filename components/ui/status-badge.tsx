@@ -4,13 +4,13 @@ import { cn } from "@/lib/utils";
 const styles: Record<ServiceStatus, string> = {
   ga: "border-lime/30 bg-lime/[0.08] text-lime",
   preview: "border-cyan/30 bg-cyan/[0.08] text-cyan",
-  "coming-soon": "border-line-strong bg-white/[0.04] text-paper-2",
+  "coming-soon": "border-line-strong bg-fg/[0.04] text-fg-2",
 };
 
 const dots: Record<ServiceStatus, string> = {
   ga: "bg-lime",
   preview: "bg-cyan",
-  "coming-soon": "bg-paper-3",
+  "coming-soon": "bg-fg-3",
 };
 
 /** Consistent, accessible service-status label. */

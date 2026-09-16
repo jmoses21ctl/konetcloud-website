@@ -11,10 +11,10 @@ const base =
 
 const variants: Record<Variant, string> = {
   primary:
-    "sheen overflow-hidden bg-brand text-ink shadow-[inset_0_1px_0_rgb(255_255_255/0.35),0_0_0_1px_rgb(245_180_0/0.4)] hover:bg-brand-soft hover:shadow-[inset_0_1px_0_rgb(255_255_255/0.5),0_0_0_1px_rgb(255_216_107/0.5),0_8px_30px_-8px_rgb(245_180_0/0.7)]",
+    "sheen overflow-hidden bg-brand text-white shadow-[inset_0_1px_0_rgb(255_255_255/0.25),0_8px_24px_-10px_rgb(0_126_237/0.7)] hover:bg-brand-deep hover:shadow-[inset_0_1px_0_rgb(255_255_255/0.25),0_12px_32px_-10px_rgb(0_98_196/0.75)]",
   secondary:
-    "border border-line-strong bg-white/[0.02] text-paper hover:border-white/30 hover:bg-white/[0.06]",
-  ghost: "text-paper-2 hover:text-paper",
+    "border border-line-strong bg-surface-2/80 text-fg backdrop-blur hover:border-fg/25 hover:bg-surface-2",
+  ghost: "text-fg-2 hover:text-fg",
 };
 
 const sizes: Record<Size, string> = {

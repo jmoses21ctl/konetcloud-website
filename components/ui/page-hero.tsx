@@ -29,13 +29,13 @@ export function PageHero({
   return (
     <section
       className={cn(
-        "relative isolate overflow-hidden bg-ink pt-32 pb-14 sm:pt-40 sm:pb-20",
+        "relative isolate overflow-hidden bg-surface pt-32 pb-14 sm:pt-40 sm:pb-20",
         className,
       )}
     >
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 top-0 -z-10 h-[32rem] bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgb(245_180_0/0.10),transparent_70%)]"
+        className="absolute inset-x-0 top-0 -z-10 h-[32rem] bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgb(255_197_49/0.35),transparent_70%)]"
       />
       <div
         className={cn(
@@ -50,7 +50,7 @@ export function PageHero({
         )}
       >
         <div
-          className="rise flex items-center gap-3 font-mono text-[11.5px] tracking-[0.12em] text-paper-3 uppercase"
+          className="rise flex items-center gap-3 font-mono text-[11.5px] tracking-[0.12em] text-fg-3 uppercase"
           style={{ "--i": 0 } as React.CSSProperties}
         >
           {eyebrow}
@@ -63,7 +63,7 @@ export function PageHero({
         </h1>
         {lede && (
           <p
-            className="rise max-w-2xl text-base leading-relaxed text-pretty text-paper-2 sm:text-lg"
+            className="rise max-w-2xl text-base leading-relaxed text-pretty text-fg-2 sm:text-lg"
             style={{ "--i": 2 } as React.CSSProperties}
           >
             {lede}

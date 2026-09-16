@@ -6,7 +6,7 @@ import { availabilityAttributes, availabilityZones } from "@/lib/trust";
 
 export function Availability() {
   return (
-    <section id="availability" className="relative bg-ink py-24 md:py-32">
+    <section id="availability" className="relative bg-surface-3 py-24 md:py-32">
       <div className="container-x grid gap-14 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] lg:gap-16">
         <div className="flex flex-col gap-10">
           <Reveal variant="left">
@@ -25,10 +25,10 @@ export function Availability() {
                 className="stagger flex items-center justify-between py-4"
                 style={{ "--i": i } as React.CSSProperties}
               >
-                <span className="font-mono text-[11px] tracking-[0.12em] text-paper-3 uppercase">
+                <span className="font-mono text-[11px] tracking-[0.12em] text-fg-3 uppercase">
                   {z.label}
                 </span>
-                <span className="text-[15px] font-semibold tracking-[-0.01em] text-paper">
+                <span className="text-[15px] font-semibold tracking-[-0.01em] text-fg">
                   {z.name}
                 </span>
               </li>
@@ -39,7 +39,7 @@ export function Availability() {
             {availabilityAttributes.map((a, i) => (
               <li
                 key={a}
-                className="stagger-pop rounded-full border border-line bg-ink-2 px-3 py-1.5 text-[12.5px] text-paper-2"
+                className="stagger-pop rounded-full border border-line bg-surface-2 px-3 py-1.5 text-[12.5px] text-fg-2"
                 style={{ "--i": i } as React.CSSProperties}
               >
                 {a}

@@ -28,13 +28,13 @@ const SPAWN_EVERY_MS = 320;
 
 // Brand gold carries almost every spark; cyan and lime are rare accents.
 const SPARK_COLORS = [
-  "245 180 0",
-  "245 180 0",
-  "245 180 0",
-  "245 180 0",
-  "255 216 107",
-  "2 164 238",
-  "122 184 0",
+  "255 255 255",
+  "255 255 255",
+  "255 255 255",
+  "0 126 237",
+  "0 126 237",
+  "41 182 240",
+  "240 60 46",
 ];
 
 /**
@@ -156,7 +156,7 @@ export function HeroNetwork({ className }: { className?: string }) {
           if (d2 > LINK_DIST * LINK_DIST) continue;
           const k = 1 - Math.sqrt(d2) / LINK_DIST;
           const lit = Math.max(a.flash, b.flash);
-          ctx!.strokeStyle = `rgb(255 216 107 / ${(k * k * 0.34 + lit * 0.3).toFixed(3)})`;
+          ctx!.strokeStyle = `rgb(255 255 255 / ${(k * k * 0.5 + lit * 0.35).toFixed(3)})`;
           ctx!.beginPath();
           ctx!.moveTo(a.x, a.y);
           ctx!.lineTo(b.x, b.y);
@@ -200,14 +200,14 @@ export function HeroNetwork({ className }: { className?: string }) {
       for (const n of nodes) {
         if (n.flash > 0) {
           const g = ctx!.createRadialGradient(n.x, n.y, 0, n.x, n.y, 14);
-          g.addColorStop(0, `rgb(245 180 0 / ${(n.flash * 0.5).toFixed(3)})`);
-          g.addColorStop(1, "rgb(245 180 0 / 0)");
+          g.addColorStop(0, `rgb(255 255 255 / ${(n.flash * 0.7).toFixed(3)})`);
+          g.addColorStop(1, "rgb(255 255 255 / 0)");
           ctx!.fillStyle = g;
           ctx!.beginPath();
           ctx!.arc(n.x, n.y, 14, 0, Math.PI * 2);
           ctx!.fill();
         }
-        ctx!.fillStyle = `rgb(255 255 255 / ${(0.38 + n.flash * 0.6).toFixed(3)})`;
+        ctx!.fillStyle = `rgb(255 255 255 / ${(0.55 + n.flash * 0.45).toFixed(3)})`;
         ctx!.beginPath();
         ctx!.arc(n.x, n.y, n.r + n.flash * 1.2, 0, Math.PI * 2);
         ctx!.fill();

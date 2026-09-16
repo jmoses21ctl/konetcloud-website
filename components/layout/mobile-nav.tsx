@@ -35,7 +35,7 @@ export function MobileNav() {
         aria-controls={panelId}
         aria-label={open ? "Close menu" : "Open menu"}
         onClick={() => setOpen((v) => !v)}
-        className="relative -mr-2 flex size-10 items-center justify-center rounded-full text-paper transition-colors hover:bg-white/[0.06]"
+        className="relative -mr-2 flex size-10 items-center justify-center rounded-full text-fg transition-colors hover:bg-fg/[0.06]"
       >
         <span
           aria-hidden="true"
@@ -56,7 +56,7 @@ export function MobileNav() {
       <div
         id={panelId}
         hidden={!open}
-        className="fixed inset-x-0 top-16 bottom-0 z-40 flex flex-col overflow-y-auto border-t border-line bg-ink"
+        className="fixed inset-x-0 top-16 bottom-0 z-40 flex flex-col overflow-y-auto border-t border-line bg-surface"
       >
         <ul className="container-x flex flex-col py-2">
           {navigation.map((item, i) => {
@@ -75,13 +75,13 @@ export function MobileNav() {
                       onClick={() =>
                         setExpanded(isOpen ? null : item.label)
                       }
-                      className="flex w-full items-center justify-between py-4 text-lg font-medium tracking-[-0.01em] text-paper"
+                      className="flex w-full items-center justify-between py-4 text-lg font-medium tracking-[-0.01em] text-fg"
                     >
                       {item.label}
                       <span
                         aria-hidden="true"
                         className={cn(
-                          "font-mono text-xs text-paper-3 transition-transform duration-300",
+                          "font-mono text-xs text-fg-3 transition-transform duration-300",
                           isOpen && "rotate-45",
                         )}
                       >
@@ -110,7 +110,7 @@ export function MobileNav() {
                               <Link
                                 href={c.href}
                                 onClick={close}
-                                className="block py-2 text-[15px] text-paper-2 transition-colors hover:text-paper"
+                                className="block py-2 text-[15px] text-fg-2 transition-colors hover:text-fg"
                               >
                                 {c.label}
                               </Link>
@@ -124,10 +124,10 @@ export function MobileNav() {
                   <Link
                     href={item.href}
                     onClick={close}
-                    className="flex items-center justify-between py-4 text-lg font-medium tracking-[-0.01em] text-paper"
+                    className="flex items-center justify-between py-4 text-lg font-medium tracking-[-0.01em] text-fg"
                   >
                     {item.label}
-                    <span className="font-mono text-xs text-paper-3">
+                    <span className="font-mono text-xs text-fg-3">
                       0{i + 1}
                     </span>
                   </Link>

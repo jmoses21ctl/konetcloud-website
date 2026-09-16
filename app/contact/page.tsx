@@ -28,15 +28,15 @@ export default async function ContactPage({
         title="Talk to an expert"
         lede="Architecture, migration, commercial terms or a running issue — tell us what you're working on and we'll route you to someone who can act."
       />
-      <section className="bg-ink pb-24">
+      <section className="bg-surface pb-24">
         <div className="container-x grid gap-12 lg:grid-cols-[3fr_2fr] lg:gap-20">
           <Reveal variant="up">
             <ContactForm defaultTopic={topic} />
           </Reveal>
           <Reveal variant="right" className="flex flex-col gap-8">
-            <div className="rounded-2xl border border-line bg-ink-2 p-6">
-              <h2 className="font-mono text-[11px] tracking-[0.12em] text-paper-3 uppercase">What happens next</h2>
-              <ol className="mt-4 flex flex-col gap-3 text-[14px] text-paper-2">
+            <div className="rounded-2xl border border-line bg-surface-2 p-6">
+              <h2 className="font-mono text-[11px] tracking-[0.12em] text-fg-3 uppercase">What happens next</h2>
+              <ol className="mt-4 flex flex-col gap-3 text-[14px] text-fg-2">
                 {[
                   "We read it — a person, not a queue.",
                   "You get a reply from the right engineer or account lead.",
@@ -49,15 +49,15 @@ export default async function ContactPage({
                 ))}
               </ol>
             </div>
-            <div className="rounded-2xl border border-line bg-ink-2 p-6">
-              <h2 className="font-mono text-[11px] tracking-[0.12em] text-paper-3 uppercase">Other routes</h2>
+            <div className="rounded-2xl border border-line bg-surface-2 p-6">
+              <h2 className="font-mono text-[11px] tracking-[0.12em] text-fg-3 uppercase">Other routes</h2>
               <ul className="mt-4 flex flex-col gap-2 text-[14px]">
-                <li><Link href={site.links.status} className="text-paper-2 transition-colors hover:text-paper">Service status →</Link></li>
-                <li><Link href={site.links.docs} className="text-paper-2 transition-colors hover:text-paper">Documentation →</Link></li>
-                <li><Link href="/support" className="text-paper-2 transition-colors hover:text-paper">Support overview →</Link></li>
+                <li><Link href={site.links.status} className="text-fg-2 transition-colors hover:text-fg">Service status →</Link></li>
+                <li><Link href={site.links.docs} className="text-fg-2 transition-colors hover:text-fg">Documentation →</Link></li>
+                <li><Link href="/support" className="text-fg-2 transition-colors hover:text-fg">Support overview →</Link></li>
               </ul>
             </div>
-            <p className="font-mono text-[11px] leading-relaxed text-paper-3">
+            <p className="font-mono text-[11px] leading-relaxed text-fg-3">
               {site.name} is a {site.parent.name} company. Lagos, Nigeria.
             </p>
           </Reveal>

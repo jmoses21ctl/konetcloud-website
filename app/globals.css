@@ -2,32 +2,41 @@
 
 /* ---------------------------------------------------------------------------
  * Design tokens
- * Palette is derived from 21st Century Technologies' four-colour mark:
- * amber/gold (primary), cyan, lime, magenta — the latter three used as
- * signal colours on black.
+ * Light theme matched to the KonetCloud Console: white surfaces, blue actions,
+ * a golden atmosphere, and the K mark's cyan/green/red as small signals.
  * ------------------------------------------------------------------------- */
 @theme {
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-jetbrains), ui-monospace, "SF Mono", Menlo, monospace;
 
-  --color-ink: #000000;
-  --color-ink-2: #0a0a0b;
-  --color-ink-3: #131316;
+  /* Surfaces — warm white, matching the Console's frosted cards */
+  --color-surface: #fffdf8;
+  --color-surface-2: #ffffff;
+  --color-surface-3: #fff6e3;
 
-  --color-paper: #f5f5f4;
-  --color-paper-2: #a1a1aa;
-  --color-paper-3: #6b6b73;
+  /* Foreground */
+  --color-fg: #101828;
+  --color-fg-2: #475467;
+  --color-fg-3: #7a8494;
 
-  --color-brand: #f5b400;
-  --color-brand-deep: #e07b12;
-  --color-brand-soft: #ffd86b;
+  --color-line: rgb(16 24 40 / 0.08);
+  --color-line-strong: rgb(16 24 40 / 0.16);
 
-  --color-cyan: #02a4ee;
-  --color-lime: #7ab800;
-  --color-magenta: #e4207f;
+  /* Action blue — the Console's button and the wordmark */
+  --color-brand: #007eed;
+  --color-brand-deep: #0062c4;
+  --color-brand-soft: #66b8ff;
 
-  --color-line: rgb(255 255 255 / 0.08);
-  --color-line-strong: rgb(255 255 255 / 0.16);
+  /* Gold — the atmosphere: hero, bands, glows (Console login backdrop) */
+  --color-gold: #ffc531;
+  --color-gold-deep: #ff9a1f;
+  --color-gold-soft: #ffe38a;
+
+  /* Signals, from the K mark */
+  --color-lime: #4f8f1f;
+  --color-lime-bright: #b5d46a;
+  --color-cyan: #0e8fd1;
+  --color-red: #e5322a;
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
@@ -59,10 +68,10 @@
   @keyframes pulse-dot {
     0%,
     100% {
-      box-shadow: 0 0 0 0 rgb(122 184 0 / 0.55);
+      box-shadow: 0 0 0 0 rgb(79 143 31 / 0.5);
     }
     60% {
-      box-shadow: 0 0 0 6px rgb(122 184 0 / 0);
+      box-shadow: 0 0 0 6px rgb(79 143 31 / 0);
     }
   }
   @keyframes sweep {
@@ -133,7 +142,7 @@
  * ------------------------------------------------------------------------- */
 @layer base {
   html {
-    color-scheme: dark;
+    color-scheme: light;
     scroll-behavior: smooth;
     /* Set on both html and body so body's value isn't propagated to the
        viewport and body clips its own overflow (reveal transforms). */
@@ -144,16 +153,16 @@
     scroll-margin-top: 5rem;
   }
   body {
-    background: var(--color-ink);
-    color: var(--color-paper);
+    background: var(--color-surface);
+    color: var(--color-fg);
     overflow-x: clip;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     font-feature-settings: "ss01", "cv11", "liga";
   }
   ::selection {
-    background: var(--color-brand);
-    color: var(--color-ink);
+    background: var(--color-gold);
+    color: var(--color-fg);
   }
   :focus-visible {
     outline: 2px solid var(--color-brand);
@@ -180,6 +189,13 @@
   }
 }
 
+/* Soft elevation for white cards on the warm surface */
+@utility elevated {
+  box-shadow:
+    0 1px 2px rgb(16 24 40 / 0.04),
+    0 16px 40px -20px rgb(16 24 40 / 0.14);
+}
+
 /* Hairline that fades at both ends — used for section dividers */
 @utility hairline {
   height: 1px;
@@ -196,7 +212,7 @@
 @utility dot-field {
   background-image: radial-gradient(
     circle at center,
-    rgb(255 255 255 / 0.14) 0.75px,
+    rgb(16 24 40 / 0.14) 0.75px,
     transparent 0.9px
   );
   background-size: 22px 22px;
@@ -212,10 +228,10 @@
 @utility text-signal {
   background: linear-gradient(
     100deg,
-    var(--color-brand-soft) 0%,
+    var(--color-brand-deep) 0%,
     var(--color-brand) 35%,
-    #ffffff 60%,
-    var(--color-brand) 100%
+    var(--color-cyan) 60%,
+    var(--color-brand-deep) 100%
   );
   background-size: 220% 100%;
   -webkit-background-clip: text;
@@ -326,6 +342,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   [data-reveal],
+  [data-reveal=""][data-variant],
   [data-reveal] .stagger,
   [data-reveal] .stagger-pop,
   [data-reveal] .word,
@@ -376,7 +393,7 @@
   opacity: 0;
   background: radial-gradient(
     360px circle at var(--mx, 50%) var(--my, 50%),
-    rgb(245 180 0 / 0.14),
+    rgb(255 197 49 / 0.28),
     transparent 45%
   );
   transition: opacity 0.5s var(--ease-out-quart);
@@ -405,7 +422,7 @@
     background: linear-gradient(
       110deg,
       transparent 30%,
-      rgb(255 255 255 / 0.35) 50%,
+      rgb(255 255 255 / 0.28) 50%,
       transparent 70%
     );
     transform: translateX(-120%);
@@ -417,12 +434,15 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  [data-reveal] .stagger,
   .text-signal,
   .marquee,
-  .animate-card-in,
   .animate-float,
-  .animate-drift,
+  .animate-drift {
+    animation: none;
+  }
+  /* Entrances that start invisible must land in their settled state */
+  [data-reveal] .stagger,
+  .animate-card-in,
   .animate-line-in {
     animation: none;
     transition: none;

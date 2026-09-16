@@ -33,13 +33,13 @@ export default function SolutionsPage() {
           Browse products
         </Button>
       </PageHero>
-      <section className="bg-ink pb-24">
+      <section className="bg-surface pb-24">
         <div className="container-x">
           <Reveal as="ul" variant="up" className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {solutions.map((s, i) => (
               <li key={s.slug} className="stagger-pop" style={{ "--i": i } as React.CSSProperties}>
                 <LinkCard href={`/solutions/${s.slug}`} title={s.name} description={s.copy} tag={`0${i + 1}`}>
-                  <p className="text-[13px] font-medium text-paper-2">{s.headline}</p>
+                  <p className="text-[13px] font-medium text-fg-2">{s.headline}</p>
                 </LinkCard>
               </li>
             ))}

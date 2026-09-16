@@ -22,24 +22,24 @@ const legal = [
 export function Footer() {
   const columns = navigation.filter((n) => n.children);
   return (
-    <footer className="relative border-t border-line bg-ink">
+    <footer className="relative border-t border-line bg-surface">
       <Reveal
         variant="up"
         className="container-x grid gap-12 py-16 lg:grid-cols-[1.3fr_repeat(4,1fr)] lg:gap-8"
       >
         <div className="stagger flex flex-col gap-5">
           <Logo />
-          <p className="max-w-xs text-[13.5px] leading-relaxed text-paper-2">
+          <p className="max-w-xs text-[13.5px] leading-relaxed text-fg-2">
             Cloud infrastructure built for Africa&apos;s most important digital
             workloads.
           </p>
-          <p className="font-mono text-[11px] text-paper-3">
+          <p className="font-mono text-[11px] text-fg-3">
             Powered by{" "}
             <a
               href={site.parent.url}
               target="_blank"
               rel="noreferrer"
-              className="text-paper-2 underline-offset-4 transition-colors hover:text-paper hover:underline"
+              className="text-fg-2 underline-offset-4 transition-colors hover:text-fg hover:underline"
             >
               {site.parent.name}
             </a>
@@ -49,7 +49,7 @@ export function Footer() {
               <li key={u.href}>
                 <Link
                   href={u.href}
-                  className="text-[12.5px] text-paper-3 transition-colors hover:text-paper"
+                  className="text-[12.5px] text-fg-3 transition-colors hover:text-fg"
                 >
                   {u.label}
                 </Link>
@@ -65,8 +65,8 @@ export function Footer() {
             className="stagger"
             style={{ "--i": i + 1 } as React.CSSProperties}
           >
-            <h3 className="font-mono text-[11px] tracking-[0.12em] text-paper-3 uppercase">
-              <Link href={col.href} className="transition-colors hover:text-paper">
+            <h3 className="font-mono text-[11px] tracking-[0.12em] text-fg-3 uppercase">
+              <Link href={col.href} className="transition-colors hover:text-fg">
                 {col.label}
               </Link>
             </h3>
@@ -75,7 +75,7 @@ export function Footer() {
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="text-[13.5px] text-paper-2 transition-colors duration-200 hover:text-paper"
+                    className="text-[13.5px] text-fg-2 transition-colors duration-200 hover:text-fg"
                   >
                     {l.label}
                   </Link>
@@ -87,14 +87,14 @@ export function Footer() {
       </Reveal>
 
       <div className="border-t border-line">
-        <div className="container-x flex flex-col gap-3 py-5 font-mono text-[11px] text-paper-3 sm:flex-row sm:items-center sm:justify-between">
+        <div className="container-x flex flex-col gap-3 py-5 font-mono text-[11px] text-fg-3 sm:flex-row sm:items-center sm:justify-between">
           <span>
             © {new Date().getFullYear()} {site.name}. Lagos, Nigeria. Powered by{" "}
             <a
               href={site.parent.url}
               target="_blank"
               rel="noreferrer"
-              className="transition-colors hover:text-paper-2"
+              className="transition-colors hover:text-fg-2"
             >
               {site.parent.name}
             </a>
@@ -103,7 +103,7 @@ export function Footer() {
           <ul className="flex flex-wrap gap-x-4 gap-y-1">
             {[{ label: "Trust", href: "/trust" }, ...legal].map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className="transition-colors hover:text-paper-2">
+                <Link href={l.href} className="transition-colors hover:text-fg-2">
                   {l.label}
                 </Link>
               </li>

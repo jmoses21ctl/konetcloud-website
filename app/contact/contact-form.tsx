@@ -23,7 +23,7 @@ export function ContactForm({ defaultTopic }: { defaultTopic: string }) {
     return (
       <div className="rise flex flex-col items-start gap-4 rounded-2xl border border-lime/30 bg-lime/[0.05] p-6 sm:p-8">
         <span className="font-mono text-[11px] tracking-[0.12em] text-lime uppercase">Received</span>
-        <p className="text-[16px] text-paper">{state.message}</p>
+        <p className="text-[16px] text-fg">{state.message}</p>
       </div>
     );
   }
@@ -61,14 +61,14 @@ export function ContactForm({ defaultTopic }: { defaultTopic: string }) {
       </Field>
 
       {!state.ok && state.message && (
-        <p role="alert" className="font-mono text-[12px] text-magenta">{state.message}</p>
+        <p role="alert" className="font-mono text-[12px] text-red">{state.message}</p>
       )}
 
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <Button type="submit" disabled={pending} arrow>
           {pending ? "Sending…" : "Send"}
         </Button>
-        <p className="font-mono text-[11px] text-paper-3">
+        <p className="font-mono text-[11px] text-fg-3">
           Handled under our privacy notice. No marketing lists.
         </p>
       </div>
@@ -77,8 +77,8 @@ export function ContactForm({ defaultTopic }: { defaultTopic: string }) {
 }
 
 const input =
-  "w-full rounded-lg border border-line bg-ink-2 px-3.5 py-2.5 text-[14px] text-paper transition-colors placeholder:text-paper-3 hover:border-line-strong focus:border-brand focus:outline-none";
-const invalid = "border-magenta/60";
+  "w-full rounded-lg border border-line bg-surface-2 px-3.5 py-2.5 text-[14px] text-fg transition-colors placeholder:text-fg-3 hover:border-line-strong focus:border-brand focus:outline-none";
+const invalid = "border-red/60";
 
 function Field({
   label,
@@ -95,12 +95,12 @@ function Field({
 }) {
   return (
     <div className="flex flex-col gap-1.5">
-      <label htmlFor={htmlFor} className="flex items-baseline justify-between text-[13px] font-medium text-paper-2">
+      <label htmlFor={htmlFor} className="flex items-baseline justify-between text-[13px] font-medium text-fg-2">
         {label}
-        {hint && <span className="font-mono text-[10.5px] text-paper-3">{hint}</span>}
+        {hint && <span className="font-mono text-[10.5px] text-fg-3">{hint}</span>}
       </label>
       {children}
-      {error && <p className="font-mono text-[11.5px] text-magenta">{error}</p>}
+      {error && <p className="font-mono text-[11.5px] text-red">{error}</p>}
     </div>
   );
 }

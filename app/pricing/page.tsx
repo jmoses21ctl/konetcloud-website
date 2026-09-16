@@ -34,16 +34,16 @@ export default function PricingPage() {
       </PageHero>
 
       <Section index="01" eyebrow="Categories" title="Pricing by category" description="Each category page lists approved configurations, charging units and any additional charges.">
-        <Reveal variant="up" className="overflow-hidden rounded-2xl border border-line bg-ink-2">
+        <Reveal variant="up" className="overflow-hidden rounded-2xl border border-line bg-surface-2">
           <ul className="divide-y divide-line">
             {pricingCategories.map((c, i) => (
               <li key={c.slug} className="stagger" style={{ "--i": i } as React.CSSProperties}>
-                <Link href={`/pricing/${c.slug}`} className="group grid gap-1 px-5 py-4 transition-colors hover:bg-white/[0.03] sm:grid-cols-[12rem_1fr_auto] sm:items-center sm:gap-6 sm:px-6">
-                  <span className="flex items-center gap-2 text-[15px] font-semibold text-paper">
+                <Link href={`/pricing/${c.slug}`} className="group grid gap-1 px-5 py-4 transition-colors hover:bg-fg/[0.03] sm:grid-cols-[12rem_1fr_auto] sm:items-center sm:gap-6 sm:px-6">
+                  <span className="flex items-center gap-2 text-[15px] font-semibold text-fg">
                     {c.name}
-                    <ArrowUpRight className="size-3.5 text-paper-3 opacity-0 transition-[opacity,transform] duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100" />
+                    <ArrowUpRight className="size-3.5 text-fg-3 opacity-0 transition-[opacity,transform] duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100" />
                   </span>
-                  <span className="text-[13.5px] text-paper-2">{c.metered}</span>
+                  <span className="text-[13.5px] text-fg-2">{c.metered}</span>
                   {"pending" in c && c.pending ? <StatusBadge status="coming-soon" /> : <span className="font-mono text-[11.5px] text-brand">View rates</span>}
                 </Link>
               </li>
@@ -55,10 +55,10 @@ export default function PricingPage() {
       <Section index="02" eyebrow="Models" title="Many ways to buy" description="Clearly distinguished wherever they apply.">
         <Reveal as="ul" variant="up" className="grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-5">
           {pricingModels.map((m, i) => (
-            <li key={m.name} className="stagger flex flex-col gap-2 bg-ink p-5" style={{ "--i": i } as React.CSSProperties}>
-              <span className="font-mono text-[10.5px] tracking-[0.12em] text-paper-3 uppercase">0{i + 1}</span>
-              <h3 className="text-[15px] font-semibold text-paper">{m.name}</h3>
-              <p className="text-[13.5px] leading-relaxed text-paper-2">{m.copy}</p>
+            <li key={m.name} className="stagger flex flex-col gap-2 bg-surface p-5" style={{ "--i": i } as React.CSSProperties}>
+              <span className="font-mono text-[10.5px] tracking-[0.12em] text-fg-3 uppercase">0{i + 1}</span>
+              <h3 className="text-[15px] font-semibold text-fg">{m.name}</h3>
+              <p className="text-[13.5px] leading-relaxed text-fg-2">{m.copy}</p>
             </li>
           ))}
         </Reveal>
@@ -76,9 +76,9 @@ export default function PricingPage() {
         </Reveal>
       </Section>
 
-      <section className="bg-ink pb-24">
+      <section className="bg-surface pb-24">
         <div className="container-x">
-          <Reveal as="ul" variant="up" className="mx-auto max-w-3xl flex flex-col gap-3 rounded-2xl border border-line bg-ink-2 p-6 font-mono text-[12px] leading-relaxed text-paper-3">
+          <Reveal as="ul" variant="up" className="mx-auto max-w-3xl flex flex-col gap-3 rounded-2xl border border-line bg-surface-2 p-6 font-mono text-[12px] leading-relaxed text-fg-3">
             {pricingNotes.map((n, i) => (
               <li key={n} className="stagger flex gap-3" style={{ "--i": i } as React.CSSProperties}>
                 <span className="text-brand">—</span>{n}

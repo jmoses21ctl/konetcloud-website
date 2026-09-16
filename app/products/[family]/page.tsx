@@ -75,7 +75,7 @@ export default async function ProductFamilyPage({
             {f.covers.map((c, i) => (
               <li key={c} className="stagger flex items-start gap-4 py-4" style={{ "--i": i } as React.CSSProperties}>
                 <span className="mt-0.5 font-mono text-[11px] text-brand">0{i + 1}</span>
-                <span className="text-[14.5px] text-paper-2">{c}</span>
+                <span className="text-[14.5px] text-fg-2">{c}</span>
               </li>
             ))}
           </Reveal>
@@ -108,9 +108,9 @@ export default async function ProductFamilyPage({
                 { label: "Service status", href: site.links.status },
               ].map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="flex items-center justify-between rounded-lg border border-line bg-ink-2 px-4 py-3 text-[14px] text-paper-2 transition-colors hover:border-line-strong hover:text-paper">
+                  <Link href={l.href} className="flex items-center justify-between rounded-lg border border-line bg-surface-2 px-4 py-3 text-[14px] text-fg-2 transition-colors hover:border-line-strong hover:text-fg">
                     {l.label}
-                    <span aria-hidden="true" className="font-mono text-paper-3">→</span>
+                    <span aria-hidden="true" className="font-mono text-fg-3">→</span>
                   </Link>
                 </li>
               ))}
@@ -119,9 +119,9 @@ export default async function ProductFamilyPage({
           <Reveal as="ul" variant="up" index={1} className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
             {siblings.map((p, i) => (
               <li key={p.slug} className="stagger" style={{ "--i": i } as React.CSSProperties}>
-                <Link href={`/products/${p.slug}`} className="group flex flex-col gap-3 rounded-lg border border-line bg-ink-2 p-4 transition-colors hover:border-line-strong">
-                  <p.icon className="size-5 text-paper-3 transition-colors group-hover:text-brand" />
-                  <span className="text-[13px] font-medium text-paper">{p.name}</span>
+                <Link href={`/products/${p.slug}`} className="group flex flex-col gap-3 rounded-lg border border-line bg-surface-2 p-4 transition-colors hover:border-line-strong">
+                  <p.icon className="size-5 text-fg-3 transition-colors group-hover:text-brand" />
+                  <span className="text-[13px] font-medium text-fg">{p.name}</span>
                 </Link>
               </li>
             ))}

@@ -1,3 +1,4 @@
+import { GoldenBackdrop } from "@/components/sections/golden-backdrop";
 import { HeroNetwork } from "@/components/sections/hero-network";
 import { Button } from "@/components/ui/button";
 import { site } from "@/lib/site";
@@ -41,21 +42,22 @@ export function ComingSoon({ segments }: Props) {
   const section = segments.length > 1 ? titleFromSlug(segments[0]) : null;
 
   return (
-    <section className="relative isolate flex min-h-svh flex-col items-center justify-center overflow-hidden bg-ink px-5 pt-16 text-center">
+    <section className="relative isolate flex min-h-svh flex-col items-center justify-center overflow-hidden bg-gold px-5 pt-16 text-center">
       <div aria-hidden="true" className="absolute inset-0 -z-10">
+        <GoldenBackdrop />
         <HeroNetwork className="absolute inset-0 h-full w-full [mask-image:radial-gradient(ellipse_70%_70%_at_50%_45%,black_20%,transparent_70%)]" />
       </div>
 
       {/* Breadcrumb in mono, the way a path reads in a terminal */}
       <p
-        className="rise flex flex-wrap items-center justify-center gap-2 font-mono text-[12px] text-paper-3"
+        className="rise flex flex-wrap items-center justify-center gap-2 font-mono text-[12px] text-fg/60"
         style={{ "--i": 0 } as React.CSSProperties}
       >
         <span>konetcloud.com</span>
         {segments.map((s, i) => (
           <span key={`${s}-${i}`} className="flex items-center gap-2">
-            <span className="text-paper-3/50">/</span>
-            <span className={i === segments.length - 1 ? "text-paper-2" : ""}>
+            <span className="text-fg-3/50">/</span>
+            <span className={i === segments.length - 1 ? "text-fg-2" : ""}>
               {s}
             </span>
           </span>
@@ -63,7 +65,7 @@ export function ComingSoon({ segments }: Props) {
       </p>
 
       <p
-        className="rise mt-8 inline-flex h-7 items-center gap-2 rounded-full border border-brand/30 bg-brand/[0.06] px-3 font-mono text-[11px] tracking-[0.12em] text-brand uppercase"
+        className="rise mt-8 inline-flex h-7 items-center gap-2 rounded-full border border-white/60 bg-white/50 px-3 font-mono text-[11px] tracking-[0.12em] text-fg uppercase backdrop-blur"
         style={{ "--i": 1 } as React.CSSProperties}
       >
         <span className="size-1.5 rounded-full bg-brand" />
@@ -76,14 +78,14 @@ export function ComingSoon({ segments }: Props) {
       >
         {title}
         {section && (
-          <span className="mt-2 block text-[0.5em] font-medium tracking-[-0.02em] text-paper-3">
+          <span className="mt-2 block text-[0.5em] font-medium tracking-[-0.02em] text-fg-3">
             {section}
           </span>
         )}
       </h1>
 
       <p
-        className="rise mt-6 max-w-md text-[15px] leading-relaxed text-paper-2 sm:text-base"
+        className="rise mt-6 max-w-md text-[15px] leading-relaxed text-fg/75 sm:text-base"
         style={{ "--i": 3 } as React.CSSProperties}
       >
         We&apos;re still writing this page. Everything on {site.name} shares one

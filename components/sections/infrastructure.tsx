@@ -6,7 +6,7 @@ import { productFamilies } from "@/lib/products";
 /** Homepage product grid — one card per family, eight in a 4×2. */
 export function Infrastructure() {
   return (
-    <section id="products" className="relative bg-ink py-24 md:py-32">
+    <section id="products" className="relative bg-surface py-24 md:py-32">
       <div className="container-x">
         <Reveal variant="left">
           <SectionHeading

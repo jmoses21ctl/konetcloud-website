@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { GoldenBackdrop } from "@/components/sections/golden-backdrop";
 import { HeroConsole } from "@/components/sections/hero-console";
 import { HeroNetwork } from "@/components/sections/hero-network";
 import { Button } from "@/components/ui/button";
@@ -16,7 +17,7 @@ export function Hero() {
   return (
     <section
       aria-labelledby="hero-title"
-      className="relative isolate overflow-hidden bg-ink pt-36 pb-20 sm:pt-44 md:pb-28"
+      className="relative isolate overflow-hidden bg-gold pt-36 pb-20 sm:pt-44 md:pb-28"
     >
       <Backdrop />
 
@@ -27,7 +28,7 @@ export function Hero() {
           target="_blank"
           rel="noreferrer"
           style={{ "--i": 0 } as React.CSSProperties}
-          className="rise group relative inline-flex h-8 items-center gap-2.5 overflow-hidden rounded-full border border-line bg-white/[0.03] pr-3.5 pl-2.5 text-[12.5px] font-medium text-paper-2 transition-colors hover:border-line-strong hover:text-paper"
+          className="rise group relative inline-flex h-8 items-center gap-2.5 overflow-hidden rounded-full border border-white/60 bg-white/45 pr-3.5 pl-2.5 text-[12.5px] font-medium text-fg backdrop-blur transition-colors hover:bg-white/70"
         >
           <span className="relative flex size-1.5">
             <span className="animate-pulse-dot absolute inset-0 rounded-full bg-lime" />
@@ -35,12 +36,12 @@ export function Hero() {
           </span>
           Three availability zones in Lagos
           <span aria-hidden="true" className="h-3 w-px bg-line-strong" />
-          <span className="font-mono text-[11px] tracking-wide text-paper-3 uppercase transition-colors group-hover:text-paper-2">
+          <span className="font-mono text-[11px] tracking-wide text-fg-3 uppercase transition-colors group-hover:text-fg-2">
             by 21CTL
           </span>
           <span
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 ease-out-quart group-hover:translate-x-full"
+            className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/60 to-transparent transition-transform duration-700 ease-out-quart group-hover:translate-x-full"
           />
         </a>
 
@@ -65,13 +66,13 @@ export function Hero() {
 
         {/* Supporting line + description */}
         <p
-          className="rise mt-6 max-w-2xl text-lg leading-snug font-medium tracking-[-0.01em] text-balance text-paper sm:text-xl"
+          className="rise mt-6 max-w-2xl text-lg leading-snug font-medium tracking-[-0.01em] text-balance text-fg sm:text-xl"
           style={{ "--i": 3 } as React.CSSProperties}
         >
           {site.tagline}
         </p>
         <p
-          className="rise mt-3 max-w-[38rem] text-base leading-relaxed text-pretty text-paper-2 sm:text-[17px]"
+          className="rise mt-3 max-w-[38rem] text-base leading-relaxed text-pretty text-fg/75 sm:text-[17px]"
           style={{ "--i": 4 } as React.CSSProperties}
         >
           Run applications, data platforms and AI workloads on high-performance
@@ -105,13 +106,13 @@ export function Hero() {
             <li key={f.slug} className="flex items-center">
               <Link
                 href={`/products/${f.slug}`}
-                className="group inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-[13px] font-medium text-paper-2 transition-colors hover:bg-white/[0.05] hover:text-paper"
+                className="group inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-[13px] font-medium text-fg/80 transition-colors hover:bg-white/50 hover:text-fg"
               >
-                <f.icon className="size-4 text-paper-3 transition-colors group-hover:text-brand" />
+                <f.icon className="size-4 text-fg/60 transition-colors group-hover:text-brand" />
                 {f.name}
               </Link>
               {i < strip.length - 1 && (
-                <span aria-hidden="true" className="hidden size-1 rounded-full bg-line-strong sm:block" />
+                <span aria-hidden="true" className="hidden size-1 rounded-full bg-fg/25 sm:block" />
               )}
             </li>
           ))}
@@ -154,14 +155,14 @@ function Stat({
   label: string;
 }) {
   return (
-    <div className="relative flex flex-col items-center gap-1.5 md:border-l md:border-line md:first:border-0">
-      <dt className="order-2 text-[12.5px] text-paper-3">{label}</dt>
-      <dd className="order-1 font-mono text-2xl font-medium tracking-tight text-paper tabular-nums">
+    <div className="relative flex flex-col items-center gap-1.5 md:border-l md:border-fg/10 md:first:border-0">
+      <dt className="order-2 text-[12.5px] text-fg/65">{label}</dt>
+      <dd className="order-1 font-mono text-2xl font-medium tracking-tight text-fg tabular-nums">
         {value}
       </dd>
       <span
         aria-hidden="true"
-        className="absolute -top-3 left-1/2 hidden -translate-x-1/2 font-mono text-[10px] text-paper-3/60 md:block"
+        className="absolute -top-3 left-1/2 hidden -translate-x-1/2 font-mono text-[10px] text-fg-3/60 md:block"
       >
         0{index}
       </span>
@@ -177,21 +178,20 @@ function Stat({
 function Backdrop() {
   return (
     <div aria-hidden="true" className="absolute inset-0 -z-10">
+      <GoldenBackdrop fadeBottom />
       <HeroNetwork className="absolute inset-x-0 top-0 h-[72%] w-full [mask-image:radial-gradient(ellipse_75%_80%_at_50%_35%,black_25%,transparent_72%)]" />
 
       <div className="container-x absolute inset-x-0 top-0 h-full">
         <div className="relative h-full">
-          <div className="absolute inset-y-0 left-0 w-px bg-gradient-to-b from-transparent via-line to-transparent" />
-          <div className="absolute inset-y-0 right-0 w-px bg-gradient-to-b from-transparent via-line to-transparent" />
+          <div className="absolute inset-y-0 left-0 w-px bg-gradient-to-b from-transparent via-white/40 to-transparent" />
+          <div className="absolute inset-y-0 right-0 w-px bg-gradient-to-b from-transparent via-white/40 to-transparent" />
         </div>
       </div>
 
       <div className="absolute inset-x-0 top-[58%] overflow-hidden md:top-[54%]">
-        <div className="hairline" />
-        <div className="animate-sweep absolute inset-0 w-1/3 bg-gradient-to-r from-transparent via-brand/70 to-transparent" />
+        <div className="h-px bg-gradient-to-r from-transparent via-white/50 to-transparent" />
+        <div className="animate-sweep absolute inset-0 w-1/3 bg-gradient-to-r from-transparent via-white to-transparent" />
       </div>
-
-      <div className="absolute top-24 left-1/2 h-[28rem] w-[56rem] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgb(245_180_0/0.12),transparent)] blur-2xl" />
     </div>
   );
 }

@@ -127,7 +127,7 @@ export function Tile({ x, y, z = 0, w, d, fill, stroke, opacity = 1, className }
 }
 
 /** Faint floor grid, fading toward the edges. */
-export function Floor({ size = 312, step = 24, opacity = 0.26 }: { size?: number; step?: number; opacity?: number }) {
+export function Floor({ size = 312, step = 24, opacity = 0.16 }: { size?: number; step?: number; opacity?: number }) {
   const lines: React.ReactNode[] = [];
   for (let i = -size; i <= size; i += step) {
     lines.push(<polyline key={`a${i}`} points={pts([[i, -size, 0], [i, size, 0]])} />);
@@ -160,7 +160,7 @@ export function Beam({ a, b, color = "#FFD86B", opacity = 0.55, packet = false, 
     <g>
       <path d={d} stroke={color} strokeOpacity={opacity} strokeWidth={width} fill="none" />
       {packet && (
-        <circle r={2.6} fill="#fff">
+        <circle r={2.6} fill="#FFC531">
           <animateMotion dur={`${dur}s`} begin={`${delay}s`} repeatCount="indefinite" path={d} />
         </circle>
       )}
@@ -207,15 +207,16 @@ export function Scene({ id, children, className, floor = true, scale = 1, dy = 0
 
 /* Palette shortcuts used by scenes */
 export const K = {
-  chassis: "#23242b",
-  chassisDark: "#15161b",
-  slate: "#33353f",
-  brand: "#F5B400",
-  deep: "#E07B12",
-  soft: "#FFD86B",
-  glass: "rgb(255 216 107 / 0.10)",
-  glassLine: "rgb(255 216 107 / 0.45)",
-  lime: "#7AB800",
-  cyan: "#02A4EE",
-  magenta: "#E4207F",
+  chassis: "#2b3a4d",
+  chassisDark: "#1c2734",
+  slate: "#41546b",
+  brand: "#007EED",
+  deep: "#0062C4",
+  soft: "#66B8FF",
+  glass: "rgb(0 126 237 / 0.07)",
+  glassLine: "rgb(0 126 237 / 0.35)",
+  lime: "#8BC34A",
+  cyan: "#29B6F0",
+  gold: "#FFC531",
+  red: "#F03C2E",
 };
