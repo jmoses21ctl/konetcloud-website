@@ -50,20 +50,20 @@ export function PageHero({
         )}
       >
         <div
-          className="rise flex items-center gap-3 font-mono text-[11.5px] tracking-[0.12em] text-fg-3 uppercase"
+          className="rise flex items-center gap-3 font-mono text-[13px] tracking-[0.12em] text-fg-3 uppercase"
           style={{ "--i": 0 } as React.CSSProperties}
         >
           {eyebrow}
         </div>
         <h1
-          className="rise max-w-4xl text-4xl leading-[1.02] font-semibold tracking-[-0.04em] text-balance sm:text-5xl md:text-6xl"
+          className="rise max-w-4xl text-4xl leading-[1.02] font-bold tracking-[-0.035em] text-balance sm:text-5xl md:text-6xl"
           style={{ "--i": 1 } as React.CSSProperties}
         >
           <Words text={title} />
         </h1>
         {lede && (
           <p
-            className="rise max-w-2xl text-base leading-relaxed text-pretty text-fg-2 sm:text-lg"
+            className="rise max-w-2xl text-[18px] leading-relaxed text-pretty text-fg-2 sm:text-xl"
             style={{ "--i": 2 } as React.CSSProperties}
           >
             {lede}

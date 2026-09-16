@@ -35,29 +35,29 @@ export default async function ContactPage({
           </Reveal>
           <Reveal variant="right" className="flex flex-col gap-8">
             <div className="rounded-2xl border border-line bg-surface-2 p-6">
-              <h2 className="font-mono text-[11px] tracking-[0.12em] text-fg-3 uppercase">What happens next</h2>
-              <ol className="mt-4 flex flex-col gap-3 text-[14px] text-fg-2">
+              <h2 className="font-mono text-[12px] tracking-[0.12em] text-fg-3 uppercase">What happens next</h2>
+              <ol className="mt-4 flex flex-col gap-3 text-[16px] text-fg-2">
                 {[
                   "We read it — a person, not a queue.",
                   "You get a reply from the right engineer or account lead.",
                   "If it needs a design session, we schedule one.",
                 ].map((s, i) => (
                   <li key={s} className="flex gap-3">
-                    <span className="font-mono text-[11px] text-brand">0{i + 1}</span>
+                    <span className="font-mono text-[13px] text-brand">0{i + 1}</span>
                     {s}
                   </li>
                 ))}
               </ol>
             </div>
             <div className="rounded-2xl border border-line bg-surface-2 p-6">
-              <h2 className="font-mono text-[11px] tracking-[0.12em] text-fg-3 uppercase">Other routes</h2>
-              <ul className="mt-4 flex flex-col gap-2 text-[14px]">
+              <h2 className="font-mono text-[12px] tracking-[0.12em] text-fg-3 uppercase">Other routes</h2>
+              <ul className="mt-4 flex flex-col gap-2 text-[16px]">
                 <li><Link href={site.links.status} className="text-fg-2 transition-colors hover:text-fg">Service status →</Link></li>
                 <li><Link href={site.links.docs} className="text-fg-2 transition-colors hover:text-fg">Documentation →</Link></li>
                 <li><Link href="/support" className="text-fg-2 transition-colors hover:text-fg">Support overview →</Link></li>
               </ul>
             </div>
-            <p className="font-mono text-[11px] leading-relaxed text-fg-3">
+            <p className="font-mono text-[12.5px] leading-relaxed text-fg-3">
               {site.name} is a {site.parent.name} company. Lagos, Nigeria.
             </p>
           </Reveal>

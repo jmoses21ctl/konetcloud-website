@@ -31,7 +31,7 @@ export default function IndustriesPage() {
                 <LinkCard href={`/industries/${ind.slug}`} title={ind.name} description={ind.copy} tag={`0${i + 1}`}>
                   <ul className="flex flex-wrap gap-1.5">
                     {ind.workloads.slice(0, 3).map((w) => (
-                      <li key={w} className="rounded-md border border-line bg-surface px-2 py-0.5 font-mono text-[10.5px] text-fg-3">{w}</li>
+                      <li key={w} className="rounded-md border border-line bg-surface px-2 py-0.5 font-mono text-[12px] text-fg-3">{w}</li>
                     ))}
                   </ul>
                 </LinkCard>

@@ -46,22 +46,22 @@ export function LinkCard({
             <span />
           )}
           {tag && (
-            <span className="font-mono text-[10px] tracking-[0.12em] text-fg-3/70 uppercase">
+            <span className="font-mono text-[12px] tracking-[0.12em] text-fg-3/70 uppercase">
               {tag}
             </span>
           )}
         </div>
       )}
       <div className="flex flex-1 flex-col gap-2">
-        <h3 className="flex items-center gap-2 text-[16px] font-semibold tracking-[-0.02em] text-fg">
+        <h3 className="flex items-center gap-2 text-[18px] font-bold tracking-[-0.015em] text-fg">
           {title}
           <ArrowUpRight className="size-3.5 text-fg-3 opacity-0 transition-[opacity,transform] duration-300 ease-out-expo group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100" />
         </h3>
-        <p className="text-[14px] leading-relaxed text-fg-2">{description}</p>
+        <p className="text-[16px] leading-relaxed text-fg-2">{description}</p>
       </div>
       {children}
       {action && (
-        <span className="text-[13px] font-medium text-brand">{action}</span>
+        <span className="text-[15px] font-medium text-brand">{action}</span>
       )}
     </Link>
   );

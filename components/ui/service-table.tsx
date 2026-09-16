@@ -8,7 +8,7 @@ import type { Service } from "@/lib/products";
 export function ServiceTable({ services }: { services: Service[] }) {
   return (
     <div className="elevated overflow-hidden rounded-2xl border border-line bg-surface-2">
-      <div className="hidden grid-cols-[14rem_1fr_auto] gap-6 border-b border-line px-6 py-3 font-mono text-[11px] tracking-[0.12em] text-fg-3 uppercase md:grid">
+      <div className="hidden grid-cols-[14rem_1fr_auto] gap-6 border-b border-line px-6 py-3 font-mono text-[12.5px] tracking-[0.12em] text-fg-3 uppercase md:grid">
         <span>Service</span>
         <span>What it does</span>
         <span>Status</span>
@@ -21,12 +21,12 @@ export function ServiceTable({ services }: { services: Service[] }) {
             style={{ "--i": i } as React.CSSProperties}
           >
             <div className="flex items-center justify-between gap-3 md:block">
-              <h3 className="text-[15px] font-semibold tracking-[-0.01em] text-fg">
+              <h3 className="text-[15px] font-bold tracking-[-0.01em] text-fg">
                 {s.name}
               </h3>
               <StatusBadge status={s.status} className="md:hidden" />
             </div>
-            <p className="text-[14px] leading-relaxed text-fg-2">{s.copy}</p>
+            <p className="text-[16px] leading-relaxed text-fg-2">{s.copy}</p>
             <StatusBadge status={s.status} className="hidden md:inline-flex" />
           </li>
         ))}

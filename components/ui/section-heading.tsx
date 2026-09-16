@@ -32,17 +32,17 @@ export function SectionHeading({
         className,
       )}
     >
-      <div className="flex items-center gap-3 font-mono text-[11.5px] tracking-[0.12em] text-fg-3 uppercase">
+      <div className="flex items-center gap-3 font-mono text-[13px] tracking-[0.12em] text-fg-3 uppercase">
         <span className="text-brand">{index}</span>
         <span aria-hidden="true" className="rule h-px w-6 bg-line-strong" />
         <span>{eyebrow}</span>
       </div>
-      <h2 className="text-3xl leading-[1.05] font-semibold tracking-[-0.035em] text-balance text-fg sm:text-4xl md:text-[2.75rem]">
+      <h2 className="text-4xl leading-[1.08] font-bold tracking-[-0.03em] text-balance text-fg sm:text-5xl md:text-[3.25rem]">
         <Words text={title} />
       </h2>
       {description && (
         <p
-          className="stagger text-[15px] leading-relaxed text-pretty text-fg-2 sm:text-base"
+          className="stagger text-[17px] leading-relaxed text-pretty text-fg-2 sm:text-lg"
           style={{ "--i": 4 } as React.CSSProperties}
         >
           {description}

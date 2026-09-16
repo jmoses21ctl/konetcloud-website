@@ -50,7 +50,7 @@ export function ComingSoon({ segments }: Props) {
 
       {/* Breadcrumb in mono, the way a path reads in a terminal */}
       <p
-        className="rise flex flex-wrap items-center justify-center gap-2 font-mono text-[12px] text-fg/60"
+        className="rise flex flex-wrap items-center justify-center gap-2 font-mono text-[13.5px] text-fg/60"
         style={{ "--i": 0 } as React.CSSProperties}
       >
         <span>konetcloud.com</span>
@@ -65,7 +65,7 @@ export function ComingSoon({ segments }: Props) {
       </p>
 
       <p
-        className="rise mt-8 inline-flex h-7 items-center gap-2 rounded-full border border-white/60 bg-white/50 px-3 font-mono text-[11px] tracking-[0.12em] text-fg uppercase backdrop-blur"
+        className="rise mt-8 inline-flex h-7 items-center gap-2 rounded-full border border-white/60 bg-white/50 px-3 font-mono text-[12.5px] tracking-[0.12em] text-fg uppercase backdrop-blur"
         style={{ "--i": 1 } as React.CSSProperties}
       >
         <span className="size-1.5 rounded-full bg-brand" />
@@ -73,7 +73,7 @@ export function ComingSoon({ segments }: Props) {
       </p>
 
       <h1
-        className="rise mt-6 max-w-3xl text-4xl leading-[1.02] font-semibold tracking-[-0.04em] text-balance sm:text-5xl md:text-6xl"
+        className="rise mt-6 max-w-3xl text-4xl leading-[1.02] font-bold tracking-[-0.035em] text-balance sm:text-5xl md:text-6xl"
         style={{ "--i": 2 } as React.CSSProperties}
       >
         {title}
@@ -85,7 +85,7 @@ export function ComingSoon({ segments }: Props) {
       </h1>
 
       <p
-        className="rise mt-6 max-w-md text-[15px] leading-relaxed text-fg/75 sm:text-base"
+        className="rise mt-6 max-w-md text-[17px] leading-relaxed text-fg/75 sm:text-lg"
         style={{ "--i": 3 } as React.CSSProperties}
       >
         We&apos;re still writing this page. Everything on {site.name} shares one

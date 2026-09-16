@@ -28,7 +28,7 @@ export function Hero() {
           target="_blank"
           rel="noreferrer"
           style={{ "--i": 0 } as React.CSSProperties}
-          className="rise group relative inline-flex h-8 items-center gap-2.5 overflow-hidden rounded-full border border-white/60 bg-white/45 pr-3.5 pl-2.5 text-[12.5px] font-medium text-fg backdrop-blur transition-colors hover:bg-white/70"
+          className="rise group relative inline-flex h-8 items-center gap-2.5 overflow-hidden rounded-full border border-white/60 bg-white/45 pr-3.5 pl-2.5 text-[14px] font-medium text-fg backdrop-blur transition-colors hover:bg-white/70"
         >
           <span className="relative flex size-1.5">
             <span className="animate-pulse-dot absolute inset-0 rounded-full bg-lime" />
@@ -36,7 +36,7 @@ export function Hero() {
           </span>
           Three availability zones in Lagos
           <span aria-hidden="true" className="h-3 w-px bg-line-strong" />
-          <span className="font-mono text-[11px] tracking-wide text-fg-3 uppercase transition-colors group-hover:text-fg-2">
+          <span className="font-mono text-[12.5px] tracking-wide text-fg-3 uppercase transition-colors group-hover:text-fg-2">
             by 21CTL
           </span>
           <span
@@ -48,7 +48,7 @@ export function Hero() {
         {/* Headline */}
         <h1
           id="hero-title"
-          className="mt-7 max-w-4xl text-[2.75rem] leading-[0.98] font-semibold tracking-[-0.045em] text-balance sm:text-6xl md:text-7xl lg:text-[5.25rem]"
+          className="mt-7 max-w-4xl text-[3.25rem] leading-[0.98] font-bold tracking-[-0.04em] text-balance sm:text-6xl md:text-7xl lg:text-[5.25rem]"
         >
           <span
             className="rise block"
@@ -66,13 +66,13 @@ export function Hero() {
 
         {/* Supporting line + description */}
         <p
-          className="rise mt-6 max-w-2xl text-lg leading-snug font-medium tracking-[-0.01em] text-balance text-fg sm:text-xl"
+          className="rise mt-6 max-w-2xl text-xl leading-snug font-medium tracking-[-0.01em] text-balance text-fg sm:text-xl"
           style={{ "--i": 3 } as React.CSSProperties}
         >
           {site.tagline}
         </p>
         <p
-          className="rise mt-3 max-w-[38rem] text-base leading-relaxed text-pretty text-fg/75 sm:text-[17px]"
+          className="rise mt-3 max-w-[38rem] text-[17px] leading-relaxed text-pretty text-fg/75 sm:text-[19px]"
           style={{ "--i": 4 } as React.CSSProperties}
         >
           Run applications, data platforms and AI workloads on high-performance
@@ -106,7 +106,7 @@ export function Hero() {
             <li key={f.slug} className="flex items-center">
               <Link
                 href={`/products/${f.slug}`}
-                className="group inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-[13px] font-medium text-fg/80 transition-colors hover:bg-white/50 hover:text-fg"
+                className="group inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-[15px] font-medium text-fg/80 transition-colors hover:bg-white/50 hover:text-fg"
               >
                 <f.icon className="size-4 text-fg/60 transition-colors group-hover:text-brand" />
                 {f.name}
@@ -156,13 +156,13 @@ function Stat({
 }) {
   return (
     <div className="relative flex flex-col items-center gap-1.5 md:border-l md:border-fg/10 md:first:border-0">
-      <dt className="order-2 text-[12.5px] text-fg/65">{label}</dt>
+      <dt className="order-2 text-[14px] text-fg/65">{label}</dt>
       <dd className="order-1 font-mono text-2xl font-medium tracking-tight text-fg tabular-nums">
         {value}
       </dd>
       <span
         aria-hidden="true"
-        className="absolute -top-3 left-1/2 hidden -translate-x-1/2 font-mono text-[10px] text-fg-3/60 md:block"
+        className="absolute -top-3 left-1/2 hidden -translate-x-1/2 font-mono text-[12px] text-fg-3/60 md:block"
       >
         0{index}
       </span>

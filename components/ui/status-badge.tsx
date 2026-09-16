@@ -26,7 +26,7 @@ export function StatusBadge({
     <span
       title={meta.description}
       className={cn(
-        "inline-flex h-6 shrink-0 items-center gap-1.5 rounded-full border px-2.5 font-mono text-[10.5px] tracking-[0.1em] whitespace-nowrap uppercase",
+        "inline-flex h-6 shrink-0 items-center gap-1.5 rounded-full border px-2.5 font-mono text-[12px] tracking-[0.1em] whitespace-nowrap uppercase",
         styles[status],
         className,
       )}

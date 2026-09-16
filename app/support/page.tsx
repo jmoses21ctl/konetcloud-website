@@ -50,8 +50,8 @@ export default function SupportPage() {
       <Section index="02" eyebrow="Support plans" title="Plans are published when they are operational" description="Coverage hours and response commitments appear here only once the operating model and service terms support them.">
         <Reveal variant="scale" className="flex flex-col items-start gap-4 rounded-2xl border border-line bg-surface-2 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
           <div>
-            <h3 className="text-[16px] font-semibold text-fg">Support plan catalogue</h3>
-            <p className="mt-1 max-w-xl text-[14px] text-fg-2">Contact channels, coverage hours, response targets, escalation paths and included services for each approved plan.</p>
+            <h3 className="text-[17px] font-semibold text-fg">Support plan catalogue</h3>
+            <p className="mt-1 max-w-xl text-[16px] text-fg-2">Contact channels, coverage hours, response targets, escalation paths and included services for each approved plan.</p>
           </div>
           <StatusBadge status="coming-soon" />
         </Reveal>

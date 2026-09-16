@@ -74,8 +74,8 @@ export default async function ProductFamilyPage({
           <Reveal as="ul" variant="up" className="flex flex-col divide-y divide-line border-y border-line">
             {f.covers.map((c, i) => (
               <li key={c} className="stagger flex items-start gap-4 py-4" style={{ "--i": i } as React.CSSProperties}>
-                <span className="mt-0.5 font-mono text-[11px] text-brand">0{i + 1}</span>
-                <span className="text-[14.5px] text-fg-2">{c}</span>
+                <span className="mt-0.5 font-mono text-[12.5px] text-brand">0{i + 1}</span>
+                <span className="text-[15px] text-fg-2">{c}</span>
               </li>
             ))}
           </Reveal>
@@ -108,7 +108,7 @@ export default async function ProductFamilyPage({
                 { label: "Service status", href: site.links.status },
               ].map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="flex items-center justify-between rounded-lg border border-line bg-surface-2 px-4 py-3 text-[14px] text-fg-2 transition-colors hover:border-line-strong hover:text-fg">
+                  <Link href={l.href} className="flex items-center justify-between rounded-lg border border-line bg-surface-2 px-4 py-3 text-[16px] text-fg-2 transition-colors hover:border-line-strong hover:text-fg">
                     {l.label}
                     <span aria-hidden="true" className="font-mono text-fg-3">→</span>
                   </Link>
@@ -121,7 +121,7 @@ export default async function ProductFamilyPage({
               <li key={p.slug} className="stagger" style={{ "--i": i } as React.CSSProperties}>
                 <Link href={`/products/${p.slug}`} className="group flex flex-col gap-3 rounded-lg border border-line bg-surface-2 p-4 transition-colors hover:border-line-strong">
                   <p.icon className="size-5 text-fg-3 transition-colors group-hover:text-brand" />
-                  <span className="text-[13px] font-medium text-fg">{p.name}</span>
+                  <span className="text-[15px] font-medium text-fg">{p.name}</span>
                 </Link>
               </li>
             ))}

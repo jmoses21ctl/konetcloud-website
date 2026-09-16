@@ -33,20 +33,20 @@ export function CallToAction({
           />
 
           <p
-            className="stagger font-mono text-[11.5px] tracking-[0.12em] text-fg/70 uppercase"
+            className="stagger font-mono text-[13px] tracking-[0.12em] text-fg/70 uppercase"
             style={{ "--i": 0 } as React.CSSProperties}
           >
             {eyebrow}
           </p>
           <h2
             style={{ "--i": 1 } as React.CSSProperties}
-            className="stagger mx-auto mt-4 max-w-2xl text-3xl leading-[1.05] font-semibold tracking-[-0.035em] text-balance sm:text-4xl md:text-5xl"
+            className="stagger mx-auto mt-4 max-w-2xl text-4xl leading-[1.05] font-bold tracking-[-0.03em] text-balance sm:text-4xl md:text-5xl"
           >
             {title}
           </h2>
           <p
             style={{ "--i": 2 } as React.CSSProperties}
-            className="stagger mx-auto mt-5 max-w-lg text-[15px] leading-relaxed text-fg/75"
+            className="stagger mx-auto mt-5 max-w-lg text-[17px] leading-relaxed text-fg/75"
           >
             {copy}
           </p>

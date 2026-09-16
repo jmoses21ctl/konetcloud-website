@@ -46,11 +46,11 @@ export default function TrustPage() {
           <Reveal as="ul" variant="up" className="flex flex-col divide-y divide-line border-y border-line">
             {availabilityZones.map((z, i) => (
               <li key={z.id} className="stagger flex items-center justify-between py-4" style={{ "--i": i } as React.CSSProperties}>
-                <span className="font-mono text-[11px] tracking-[0.12em] text-fg-3 uppercase">{z.label}</span>
-                <span className="text-[15px] font-semibold text-fg">{z.name}</span>
+                <span className="font-mono text-[12px] tracking-[0.12em] text-fg-3 uppercase">{z.label}</span>
+                <span className="text-[17px] font-semibold text-fg">{z.name}</span>
               </li>
             ))}
-            <li className="stagger py-4 text-[13.5px] leading-relaxed text-fg-2" style={{ "--i": 3 } as React.CSSProperties}>
+            <li className="stagger py-4 text-[15px] leading-relaxed text-fg-2" style={{ "--i": 3 } as React.CSSProperties}>
               All three locations are presented as equal availability zones with alternate inter-zone paths. No single zone is a transit dependency.
             </li>
           </Reveal>
@@ -60,8 +60,8 @@ export default function TrustPage() {
 
       <Section index="03" eyebrow="Sovereignty" title="Designed for sovereign and regulated workloads">
         <Reveal variant="scale" className="rounded-2xl border border-brand/25 bg-brand/[0.04] p-6 sm:p-8">
-          <p className="max-w-2xl text-[17px] leading-relaxed text-fg">{sovereigntyWording}</p>
-          <p className="mt-4 max-w-2xl text-[13.5px] leading-relaxed text-fg-2">
+          <p className="max-w-2xl text-[18px] leading-relaxed text-fg">{sovereigntyWording}</p>
+          <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-fg-2">
             Certification and regulatory approval statements are published on the Compliance page only once formally issued. Until then, KonetCloud does not state or imply a certification it has not received.
           </p>
         </Reveal>

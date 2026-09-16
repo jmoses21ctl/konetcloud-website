@@ -32,7 +32,7 @@ export function ArchitectureDiagram({ className }: { className?: string }) {
         className,
       )}
     >
-      <figcaption className="flex flex-wrap items-center justify-between gap-2 font-mono text-[11px] tracking-[0.12em] text-fg-3 uppercase">
+      <figcaption className="flex flex-wrap items-center justify-between gap-2 font-mono text-[12.5px] tracking-[0.12em] text-fg-3 uppercase">
         <span>KonetCloud Multi‑Site Availability Architecture</span>
         <span>Logical view</span>
       </figcaption>
@@ -92,10 +92,10 @@ export function ArchitectureDiagram({ className }: { className?: string }) {
                 >
                   <div className="flex items-start justify-between gap-3">
                     <div>
-                      <p className="font-mono text-[10.5px] tracking-[0.12em] text-brand uppercase">
+                      <p className="font-mono text-[12px] tracking-[0.12em] text-brand uppercase">
                         {z.label}
                       </p>
-                      <h4 className="mt-1 text-[15px] font-semibold tracking-[-0.01em] text-fg">
+                      <h4 className="mt-1 text-[17px] font-semibold tracking-[-0.01em] text-fg">
                         {z.name}
                       </h4>
                     </div>
@@ -108,20 +108,20 @@ export function ArchitectureDiagram({ className }: { className?: string }) {
                     {capabilities.map((c) => (
                       <li
                         key={c}
-                        className="rounded-md border border-line bg-surface-2 px-2 py-1 text-[11.5px] text-fg-2"
+                        className="rounded-md border border-line bg-surface-2 px-2 py-1 text-[13px] text-fg-2"
                       >
                         {c}
                       </li>
                     ))}
                   </ul>
-                  <p className="font-mono text-[10.5px] tracking-[0.1em] text-fg-3 uppercase">
+                  <p className="font-mono text-[12px] tracking-[0.1em] text-fg-3 uppercase">
                     Key services
                   </p>
                 </li>
               ))}
             </ol>
           </div>
-          <p className="mt-3 text-center font-mono text-[11px] text-fg-3 md:hidden">
+          <p className="mt-3 text-center font-mono text-[12.5px] text-fg-3 md:hidden">
             Every zone connects to every other zone over redundant paths.
           </p>
         </div>
@@ -149,10 +149,10 @@ function Layer({
         accent ? "border-brand/30 bg-brand/[0.05]" : "border-line bg-surface",
       )}
     >
-      <span className="text-[13px] font-semibold tracking-[-0.01em] text-fg">
+      <span className="text-[15px] font-semibold tracking-[-0.01em] text-fg">
         {label}
       </span>
-      <ul className="flex flex-wrap gap-x-4 gap-y-1 font-mono text-[11px] text-fg-3">
+      <ul className="flex flex-wrap gap-x-4 gap-y-1 font-mono text-[12.5px] text-fg-3">
         {items.map((it) => (
           <li key={it}>{it}</li>
         ))}

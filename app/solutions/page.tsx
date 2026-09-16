@@ -39,7 +39,7 @@ export default function SolutionsPage() {
             {solutions.map((s, i) => (
               <li key={s.slug} className="stagger-pop" style={{ "--i": i } as React.CSSProperties}>
                 <LinkCard href={`/solutions/${s.slug}`} title={s.name} description={s.copy} tag={`0${i + 1}`}>
-                  <p className="text-[13px] font-medium text-fg-2">{s.headline}</p>
+                  <p className="text-[15px] font-medium text-fg-2">{s.headline}</p>
                 </LinkCard>
               </li>
             ))}

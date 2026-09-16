@@ -25,7 +25,7 @@ export function Availability() {
                 className="stagger flex items-center justify-between py-4"
                 style={{ "--i": i } as React.CSSProperties}
               >
-                <span className="font-mono text-[11px] tracking-[0.12em] text-fg-3 uppercase">
+                <span className="font-mono text-[12px] tracking-[0.12em] text-fg-3 uppercase">
                   {z.label}
                 </span>
                 <span className="text-[15px] font-semibold tracking-[-0.01em] text-fg">
@@ -39,7 +39,7 @@ export function Availability() {
             {availabilityAttributes.map((a, i) => (
               <li
                 key={a}
-                className="stagger-pop rounded-full border border-line bg-surface-2 px-3 py-1.5 text-[12.5px] text-fg-2"
+                className="stagger-pop rounded-full border border-line bg-surface-2 px-3 py-1.5 text-[14px] text-fg-2"
                 style={{ "--i": i } as React.CSSProperties}
               >
                 {a}

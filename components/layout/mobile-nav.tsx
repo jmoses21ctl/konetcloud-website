@@ -75,13 +75,13 @@ export function MobileNav() {
                       onClick={() =>
                         setExpanded(isOpen ? null : item.label)
                       }
-                      className="flex w-full items-center justify-between py-4 text-lg font-medium tracking-[-0.01em] text-fg"
+                      className="flex w-full items-center justify-between py-4 text-xl font-semibold tracking-[-0.01em] text-fg"
                     >
                       {item.label}
                       <span
                         aria-hidden="true"
                         className={cn(
-                          "font-mono text-xs text-fg-3 transition-transform duration-300",
+                          "font-mono text-sm text-fg-3 transition-transform duration-300",
                           isOpen && "rotate-45",
                         )}
                       >
@@ -100,7 +100,7 @@ export function MobileNav() {
                             <Link
                               href={item.href}
                               onClick={close}
-                              className="block py-2 text-[15px] text-brand"
+                              className="block py-2 text-[17px] text-brand"
                             >
                               All {item.label.toLowerCase()}
                             </Link>
@@ -110,7 +110,7 @@ export function MobileNav() {
                               <Link
                                 href={c.href}
                                 onClick={close}
-                                className="block py-2 text-[15px] text-fg-2 transition-colors hover:text-fg"
+                                className="block py-2 text-[17px] text-fg-2 transition-colors hover:text-fg"
                               >
                                 {c.label}
                               </Link>
@@ -124,10 +124,10 @@ export function MobileNav() {
                   <Link
                     href={item.href}
                     onClick={close}
-                    className="flex items-center justify-between py-4 text-lg font-medium tracking-[-0.01em] text-fg"
+                    className="flex items-center justify-between py-4 text-xl font-semibold tracking-[-0.01em] text-fg"
                   >
                     {item.label}
-                    <span className="font-mono text-xs text-fg-3">
+                    <span className="font-mono text-[12.5px] text-fg-3">
                       0{i + 1}
                     </span>
                   </Link>

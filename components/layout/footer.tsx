@@ -29,11 +29,11 @@ export function Footer() {
       >
         <div className="stagger flex flex-col gap-5">
           <Logo />
-          <p className="max-w-xs text-[13.5px] leading-relaxed text-fg-2">
+          <p className="max-w-xs text-[15px] leading-relaxed text-fg-2">
             Cloud infrastructure built for Africa&apos;s most important digital
             workloads.
           </p>
-          <p className="font-mono text-[11px] text-fg-3">
+          <p className="font-mono text-[12.5px] text-fg-3">
             Powered by{" "}
             <a
               href={site.parent.url}
@@ -49,7 +49,7 @@ export function Footer() {
               <li key={u.href}>
                 <Link
                   href={u.href}
-                  className="text-[12.5px] text-fg-3 transition-colors hover:text-fg"
+                  className="text-[14px] text-fg-3 transition-colors hover:text-fg"
                 >
                   {u.label}
                 </Link>
@@ -65,7 +65,7 @@ export function Footer() {
             className="stagger"
             style={{ "--i": i + 1 } as React.CSSProperties}
           >
-            <h3 className="font-mono text-[11px] tracking-[0.12em] text-fg-3 uppercase">
+            <h3 className="font-mono text-[12px] tracking-[0.12em] text-fg-3 uppercase">
               <Link href={col.href} className="transition-colors hover:text-fg">
                 {col.label}
               </Link>
@@ -75,7 +75,7 @@ export function Footer() {
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="text-[13.5px] text-fg-2 transition-colors duration-200 hover:text-fg"
+                    className="text-[15px] text-fg-2 transition-colors duration-200 hover:text-fg"
                   >
                     {l.label}
                   </Link>
@@ -87,7 +87,7 @@ export function Footer() {
       </Reveal>
 
       <div className="border-t border-line">
-        <div className="container-x flex flex-col gap-3 py-5 font-mono text-[11px] text-fg-3 sm:flex-row sm:items-center sm:justify-between">
+        <div className="container-x flex flex-col gap-3 py-5 font-mono text-[12.5px] text-fg-3 sm:flex-row sm:items-center sm:justify-between">
           <span>
             © {new Date().getFullYear()} {site.name}. Lagos, Nigeria. Powered by{" "}
             <a

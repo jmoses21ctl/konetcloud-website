@@ -16,11 +16,11 @@
 
   /* Foreground */
   --color-fg: #101828;
-  --color-fg-2: #475467;
-  --color-fg-3: #7a8494;
+  --color-fg-2: #344054;
+  --color-fg-3: #5b6472;
 
-  --color-line: rgb(16 24 40 / 0.08);
-  --color-line-strong: rgb(16 24 40 / 0.16);
+  --color-line: rgb(16 24 40 / 0.1);
+  --color-line-strong: rgb(16 24 40 / 0.22);
 
   /* Action blue — the Console's button and the wordmark */
   --color-brand: #007eed;
@@ -156,6 +156,7 @@
     background: var(--color-surface);
     color: var(--color-fg);
     overflow-x: clip;
+    font-weight: 500; /* readable for older users; headings set their own */
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     font-feature-settings: "ss01", "cv11", "liga";
@@ -165,7 +166,7 @@
     color: var(--color-fg);
   }
   :focus-visible {
-    outline: 2px solid var(--color-brand);
+    outline: 3px solid var(--color-brand);
     outline-offset: 3px;
     border-radius: 2px;
   }

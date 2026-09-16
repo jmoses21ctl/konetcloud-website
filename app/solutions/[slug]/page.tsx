@@ -50,12 +50,12 @@ export default async function SolutionPage({ params }: { params: Promise<Params>
       <Section index="01" eyebrow="Problem and outcome" title="What changes">
         <Reveal variant="up" className="grid gap-px overflow-hidden rounded-2xl border border-line bg-line md:grid-cols-2">
           <div className="stagger flex flex-col gap-3 bg-surface p-6 sm:p-8" style={{ "--i": 0 } as React.CSSProperties}>
-            <span className="font-mono text-[11px] tracking-[0.12em] text-fg-3 uppercase">Today</span>
-            <p className="text-[15.5px] leading-relaxed text-fg-2">{s.problem}</p>
+            <span className="font-mono text-[12px] tracking-[0.12em] text-fg-3 uppercase">Today</span>
+            <p className="text-[16px] leading-relaxed text-fg-2">{s.problem}</p>
           </div>
           <div className="stagger flex flex-col gap-3 bg-surface p-6 sm:p-8" style={{ "--i": 1 } as React.CSSProperties}>
-            <span className="font-mono text-[11px] tracking-[0.12em] text-brand uppercase">With KonetCloud</span>
-            <p className="text-[15.5px] leading-relaxed text-fg">{s.outcome}</p>
+            <span className="font-mono text-[12px] tracking-[0.12em] text-brand uppercase">With KonetCloud</span>
+            <p className="text-[17px] leading-relaxed text-fg">{s.outcome}</p>
           </div>
         </Reveal>
       </Section>
@@ -68,7 +68,7 @@ export default async function SolutionPage({ params }: { params: Promise<Params>
               <span aria-hidden="true" className="absolute top-5 -left-8 flex size-[calc(theme(spacing.4)-1px)] -translate-x-1/2 items-center justify-center">
                 <span className="size-2 rounded-full bg-brand shadow-[0_0_12px_rgb(0_126_237/0.6)]" />
               </span>
-              <span className="mr-3 font-mono text-[11px] text-fg-3">0{i + 1}</span>
+              <span className="mr-3 font-mono text-[12.5px] text-fg-3">0{i + 1}</span>
               <span className="text-[15px] text-fg-2">{step}</span>
             </li>
           ))}
@@ -90,7 +90,7 @@ export default async function SolutionPage({ params }: { params: Promise<Params>
       <Section index="04" eyebrow="Considerations" title="Migration, implementation and operations" description="Benefits are stated only where evidence exists; we would rather show you than tell you.">
         <Reveal as="ul" variant="up" className="grid gap-3 md:grid-cols-3">
           {s.considerations.map((c, i) => (
-            <li key={c} className="stagger rounded-xl border border-line bg-surface-2 p-5 text-[14px] leading-relaxed text-fg-2" style={{ "--i": i } as React.CSSProperties}>
+            <li key={c} className="stagger rounded-xl border border-line bg-surface-2 p-5 text-[16px] leading-relaxed text-fg-2" style={{ "--i": i } as React.CSSProperties}>
               {c}
             </li>
           ))}

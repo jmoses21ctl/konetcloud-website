@@ -7,7 +7,7 @@ type Variant = "primary" | "secondary" | "ghost";
 type Size = "sm" | "md" | "lg";
 
 const base =
-  "group/btn relative inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold tracking-[-0.01em] transition-[background-color,color,border-color,transform,box-shadow] duration-300 ease-out-quart active:scale-[0.98] disabled:pointer-events-none disabled:opacity-50";
+  "group/btn relative inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-bold tracking-[-0.005em] transition-[background-color,color,border-color,transform,box-shadow] duration-300 ease-out-quart active:scale-[0.98] disabled:pointer-events-none disabled:opacity-50";
 
 const variants: Record<Variant, string> = {
   primary:
@@ -18,9 +18,9 @@ const variants: Record<Variant, string> = {
 };
 
 const sizes: Record<Size, string> = {
-  sm: "h-9 px-4 text-[13px]",
-  md: "h-11 px-5 text-sm",
-  lg: "h-12 px-6 text-[15px]",
+  sm: "h-10 px-4 text-[15px]",
+  md: "h-12 px-6 text-[16px]",
+  lg: "h-14 px-7 text-[18px]",
 };
 
 type ButtonProps = {

@@ -15,7 +15,7 @@ export function HeroConsole() {
       />
 
       {/* Window chrome */}
-      <div className="flex h-11 items-center justify-between border-b border-line px-4 font-mono text-[11.5px] text-fg-3">
+      <div className="flex h-11 items-center justify-between border-b border-line px-4 font-mono text-[13px] text-fg-3">
         <div className="flex items-center gap-3">
           <span className="text-fg-2">console</span>
           <span className="text-fg-3/60">/</span>
@@ -34,7 +34,7 @@ export function HeroConsole() {
 
       <div className="grid min-w-0 md:grid-cols-[1.6fr_1fr]">
         {/* Activity log */}
-        <pre className="min-w-0 overflow-x-auto p-5 font-mono text-[12.5px] leading-[1.75] text-fg-2 sm:p-6 sm:text-[13px]">
+        <pre className="min-w-0 overflow-x-auto p-5 font-mono text-[14px] leading-[1.75] text-fg-2 sm:p-6 sm:text-[15px]">
           <Line prompt index={0}>
             create vm <Arg>app-web-01</Arg> --zone <Arg>lekki</Arg> --family{" "}
             <Arg>general-purpose</Arg>
@@ -59,7 +59,7 @@ export function HeroConsole() {
 
         {/* Zone health */}
         <div className="border-t border-line md:border-t-0 md:border-l">
-          <div className="flex items-center justify-between px-5 pt-5 pb-3 font-mono text-[11px] tracking-wide text-fg-3 uppercase">
+          <div className="flex items-center justify-between px-5 pt-5 pb-3 font-mono text-[12.5px] tracking-wide text-fg-3 uppercase">
             <span>Availability zones</span>
             <span>health</span>
           </div>
@@ -72,15 +72,15 @@ export function HeroConsole() {
                 <div className="flex items-center gap-3">
                   <span aria-hidden="true" className="size-1.5 rounded-full bg-brand" />
                   <div className="flex flex-col">
-                    <span className="text-[13px] font-medium text-fg">{z.name}</span>
-                    <span className="font-mono text-[11px] text-fg-3">{z.label}</span>
+                    <span className="text-[15px] font-medium text-fg">{z.name}</span>
+                    <span className="font-mono text-[12.5px] text-fg-3">{z.label}</span>
                   </div>
                 </div>
-                <span className="font-mono text-[12px] text-lime">healthy</span>
+                <span className="font-mono text-[13.5px] text-lime">healthy</span>
               </li>
             ))}
           </ul>
-          <div className="border-t border-line px-5 py-3 font-mono text-[11px] text-fg-3">
+          <div className="border-t border-line px-5 py-3 font-mono text-[12.5px] text-fg-3">
             Traffic is distributed to healthy zones
           </div>
         </div>

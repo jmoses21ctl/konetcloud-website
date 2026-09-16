@@ -114,11 +114,11 @@ export function NavMenu({ item }: { item: NavItem }) {
                 onClick={() => setOpen(false)}
                 className="group/i flex flex-col gap-0.5 rounded-lg px-3 py-2.5 transition-colors hover:bg-fg/[0.05]"
               >
-                <span className="text-[13.5px] font-medium text-fg transition-colors group-hover/i:text-brand-soft">
+                <span className="text-[15px] font-medium text-fg transition-colors group-hover/i:text-brand-soft">
                   {c.label}
                 </span>
                 {c.description && (
-                  <span className="text-[12px] leading-snug text-fg-3">
+                  <span className="text-[13.5px] leading-snug text-fg-3">
                     {c.description}
                   </span>
                 )}
@@ -129,7 +129,7 @@ export function NavMenu({ item }: { item: NavItem }) {
             <Link
               href={item.href}
               onClick={() => setOpen(false)}
-              className="flex items-center justify-between rounded-lg px-3 py-2 text-[12.5px] font-medium text-fg-2 transition-colors hover:bg-fg/[0.05] hover:text-fg"
+              className="flex items-center justify-between rounded-lg px-3 py-2 text-[14px] font-medium text-fg-2 transition-colors hover:bg-fg/[0.05] hover:text-fg"
             >
               All {item.label.toLowerCase()}
               <span aria-hidden="true">→</span>
@@ -151,7 +151,7 @@ function NavLink({
     <Link
       {...props}
       className={cn(
-        "group relative inline-flex h-9 items-center px-3 text-[13.5px] font-medium tracking-[-0.005em] text-fg-2 transition-colors duration-300 hover:text-fg aria-expanded:text-fg",
+        "group relative inline-flex h-10 items-center px-3.5 text-[16px] font-semibold tracking-[-0.005em] text-fg-2 transition-colors duration-300 hover:text-fg aria-expanded:text-fg",
         className,
       )}
     >

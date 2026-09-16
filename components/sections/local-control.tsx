@@ -26,7 +26,7 @@ export function LocalControl() {
             />
             <div className="flex flex-col gap-6 lg:items-end">
               <p
-                className="stagger max-w-sm border-l border-brand/40 pl-4 text-[13.5px] leading-relaxed text-fg-2 lg:text-right lg:border-l-0 lg:border-r lg:pr-4 lg:pl-0"
+                className="stagger max-w-sm border-l border-brand/40 pl-4 text-[15px] leading-relaxed text-fg-2 lg:text-right lg:border-l-0 lg:border-r lg:pr-4 lg:pl-0"
                 style={{ "--i": 5 } as React.CSSProperties}
               >
                 {sovereigntyWording}

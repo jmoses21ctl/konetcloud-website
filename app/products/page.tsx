@@ -48,12 +48,12 @@ export default function ProductsPage() {
                 >
                   <ul className="flex flex-wrap gap-1.5">
                     {f.services.slice(0, 4).map((s) => (
-                      <li key={s.name} className="rounded-md border border-line bg-surface px-2 py-0.5 font-mono text-[10.5px] text-fg-3">
+                      <li key={s.name} className="rounded-md border border-line bg-surface px-2 py-0.5 font-mono text-[12px] text-fg-3">
                         {s.name}
                       </li>
                     ))}
                     {f.services.length > 4 && (
-                      <li className="px-1 py-0.5 font-mono text-[10.5px] text-fg-3">
+                      <li className="px-1 py-0.5 font-mono text-[12px] text-fg-3">
                         +{f.services.length - 4}
                       </li>
                     )}

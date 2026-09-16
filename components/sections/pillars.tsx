@@ -53,13 +53,13 @@ export function Pillars() {
                 <p.icon className="size-5" />
               </span>
               <div className="flex flex-col gap-2">
-                <span className="font-mono text-[10.5px] tracking-[0.12em] text-fg-3 uppercase">
+                <span className="font-mono text-[12px] tracking-[0.12em] text-fg-3 uppercase">
                   0{i + 1}
                 </span>
-                <h3 className="text-[16px] font-semibold tracking-[-0.02em] text-fg">
+                <h3 className="text-[18px] font-bold tracking-[-0.015em] text-fg">
                   {p.title}
                 </h3>
-                <p className="text-[14px] leading-relaxed text-fg-2">{p.copy}</p>
+                <p className="text-[16px] leading-relaxed text-fg-2">{p.copy}</p>
               </div>
             </li>
           ))}
