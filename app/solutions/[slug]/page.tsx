@@ -66,7 +66,7 @@ export default async function SolutionPage({ params }: { params: Promise<Params>
           {s.architecture.map((step, i) => (
             <li key={step} className="stagger relative py-4" style={{ "--i": i } as React.CSSProperties}>
               <span aria-hidden="true" className="absolute top-5 -left-8 flex size-[calc(theme(spacing.4)-1px)] -translate-x-1/2 items-center justify-center">
-                <span className="size-2 rounded-full bg-brand shadow-[0_0_12px_rgb(2_164_238/0.8)]" />
+                <span className="size-2 rounded-full bg-brand shadow-[0_0_12px_rgb(245_180_0/0.8)]" />
               </span>
               <span className="mr-3 font-mono text-[11px] text-paper-3">0{i + 1}</span>
               <span className="text-[15px] text-paper-2">{step}</span>

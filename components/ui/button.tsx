@@ -11,7 +11,7 @@ const base =
 
 const variants: Record<Variant, string> = {
   primary:
-    "sheen overflow-hidden bg-brand text-ink shadow-[inset_0_1px_0_rgb(255_255_255/0.35),0_0_0_1px_rgb(2_164_238/0.4)] hover:bg-brand-soft hover:shadow-[inset_0_1px_0_rgb(255_255_255/0.5),0_0_0_1px_rgb(143_214_255/0.5),0_8px_30px_-8px_rgb(2_164_238/0.7)]",
+    "sheen overflow-hidden bg-brand text-ink shadow-[inset_0_1px_0_rgb(255_255_255/0.35),0_0_0_1px_rgb(245_180_0/0.4)] hover:bg-brand-soft hover:shadow-[inset_0_1px_0_rgb(255_255_255/0.5),0_0_0_1px_rgb(255_216_107/0.5),0_8px_30px_-8px_rgb(245_180_0/0.7)]",
   secondary:
     "border border-line-strong bg-white/[0.02] text-paper hover:border-white/30 hover:bg-white/[0.06]",
   ghost: "text-paper-2 hover:text-paper",

@@ -35,7 +35,7 @@ export function PageHero({
     >
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 top-0 -z-10 h-[32rem] bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgb(2_164_238/0.10),transparent_70%)]"
+        className="absolute inset-x-0 top-0 -z-10 h-[32rem] bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgb(245_180_0/0.10),transparent_70%)]"
       />
       <div
         className={cn(

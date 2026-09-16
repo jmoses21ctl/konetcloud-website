@@ -63,10 +63,10 @@ export function ComingSoon({ segments }: Props) {
       </p>
 
       <p
-        className="rise mt-8 inline-flex h-7 items-center gap-2 rounded-full border border-amber/30 bg-amber/[0.06] px-3 font-mono text-[11px] tracking-[0.12em] text-amber uppercase"
+        className="rise mt-8 inline-flex h-7 items-center gap-2 rounded-full border border-brand/30 bg-brand/[0.06] px-3 font-mono text-[11px] tracking-[0.12em] text-brand uppercase"
         style={{ "--i": 1 } as React.CSSProperties}
       >
-        <span className="size-1.5 rounded-full bg-amber" />
+        <span className="size-1.5 rounded-full bg-brand" />
         In progress
       </p>
 

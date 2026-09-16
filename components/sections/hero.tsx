@@ -191,7 +191,7 @@ function Backdrop() {
         <div className="animate-sweep absolute inset-0 w-1/3 bg-gradient-to-r from-transparent via-brand/70 to-transparent" />
       </div>
 
-      <div className="absolute top-24 left-1/2 h-[28rem] w-[56rem] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgb(2_164_238/0.12),transparent)] blur-2xl" />
+      <div className="absolute top-24 left-1/2 h-[28rem] w-[56rem] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgb(245_180_0/0.12),transparent)] blur-2xl" />
     </div>
   );
 }

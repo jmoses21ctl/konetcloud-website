@@ -26,14 +26,14 @@ const LINK_DIST = 170;
 const MAX_SPARKS = 10;
 const SPAWN_EVERY_MS = 320;
 
-// Brand cyan carries almost every spark; amber and lime are rare accents.
+// Brand gold carries almost every spark; cyan and lime are rare accents.
 const SPARK_COLORS = [
-  "2 164 238",
-  "2 164 238",
-  "2 164 238",
-  "2 164 238",
-  "143 214 255",
   "245 180 0",
+  "245 180 0",
+  "245 180 0",
+  "245 180 0",
+  "255 216 107",
+  "2 164 238",
   "122 184 0",
 ];
 
@@ -156,7 +156,7 @@ export function HeroNetwork({ className }: { className?: string }) {
           if (d2 > LINK_DIST * LINK_DIST) continue;
           const k = 1 - Math.sqrt(d2) / LINK_DIST;
           const lit = Math.max(a.flash, b.flash);
-          ctx!.strokeStyle = `rgb(143 214 255 / ${(k * k * 0.34 + lit * 0.3).toFixed(3)})`;
+          ctx!.strokeStyle = `rgb(255 216 107 / ${(k * k * 0.34 + lit * 0.3).toFixed(3)})`;
           ctx!.beginPath();
           ctx!.moveTo(a.x, a.y);
           ctx!.lineTo(b.x, b.y);
@@ -200,8 +200,8 @@ export function HeroNetwork({ className }: { className?: string }) {
       for (const n of nodes) {
         if (n.flash > 0) {
           const g = ctx!.createRadialGradient(n.x, n.y, 0, n.x, n.y, 14);
-          g.addColorStop(0, `rgb(2 164 238 / ${(n.flash * 0.5).toFixed(3)})`);
-          g.addColorStop(1, "rgb(2 164 238 / 0)");
+          g.addColorStop(0, `rgb(245 180 0 / ${(n.flash * 0.5).toFixed(3)})`);
+          g.addColorStop(1, "rgb(245 180 0 / 0)");
           ctx!.fillStyle = g;
           ctx!.beginPath();
           ctx!.arc(n.x, n.y, 14, 0, Math.PI * 2);

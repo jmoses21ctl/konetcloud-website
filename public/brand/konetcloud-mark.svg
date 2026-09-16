@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none" role="img" aria-label="KonetCloud">
   <defs>
     <linearGradient id="kc-g" x1="6" y1="8" x2="36" y2="32" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#8FD6FF"/>
-      <stop offset=".5" stop-color="#02A4EE"/>
-      <stop offset="1" stop-color="#0B6FD6"/>
+      <stop stop-color="#FFD86B"/>
+      <stop offset=".5" stop-color="#F5B400"/>
+      <stop offset="1" stop-color="#E07B12"/>
     </linearGradient>
     <!-- The K is carved out of the cloud: strokes are network edges, dots are nodes -->
     <mask id="kc-m">

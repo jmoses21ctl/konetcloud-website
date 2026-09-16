@@ -56,17 +56,17 @@ export function ArchitectureDiagram({ className }: { className?: string }) {
                 id="az-arc"
                 d="M167 48 C 167 -10, 833 -10, 833 48"
                 fill="none"
-                stroke="rgb(143 214 255 / 0.35)"
+                stroke="rgb(255 216 107 / 0.35)"
                 strokeWidth="1"
                 strokeDasharray="4 4"
                 vectorEffect="non-scaling-stroke"
               />
-              <circle r="3" fill="#02A4EE">
+              <circle r="3" fill="#F5B400">
                 <animateMotion dur="5s" repeatCount="indefinite" rotate="auto">
                   <mpath href="#az-arc" />
                 </animateMotion>
               </circle>
-              <circle r="3" fill="#8FD6FF">
+              <circle r="3" fill="#FFD86B">
                 <animateMotion dur="5s" begin="2.5s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear">
                   <mpath href="#az-arc" />
                 </animateMotion>
@@ -78,7 +78,7 @@ export function ArchitectureDiagram({ className }: { className?: string }) {
             {/* Straight paths: zone 1 ↔ 2 ↔ 3 (visible only in the gaps) */}
             <div
               aria-hidden="true"
-              className="absolute inset-x-[16%] top-1/2 hidden h-px overflow-hidden bg-[repeating-linear-gradient(90deg,rgb(143_214_255/0.35)_0_4px,transparent_4px_8px)] md:block"
+              className="absolute inset-x-[16%] top-1/2 hidden h-px overflow-hidden bg-[repeating-linear-gradient(90deg,rgb(255_216_107/0.35)_0_4px,transparent_4px_8px)] md:block"
             >
               <span className="animate-sweep absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-brand to-transparent" />
             </div>

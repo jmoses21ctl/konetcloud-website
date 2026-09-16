@@ -16,7 +16,7 @@ export function ComputeScene() {
           {[0, 1, 2, 3].map((b) => (
             <Tile key={b} x={-38 + b * 18} y={42.2} z={i * 20 + 5} w={12} d={0.01} fill={K.chassisDark} />
           ))}
-          <Led p={[36, 42.5, i * 20 + 9]} color={i === 2 ? K.amber : K.lime} pulse={i % 3 === 0} />
+          <Led p={[36, 42.5, i * 20 + 9]} color={i === 2 ? K.cyan : K.lime} pulse={i % 3 === 0} />
           <Led p={[30, 42.5, i * 20 + 9]} color={K.brand} r={1.2} />
         </g>
       ))}
@@ -66,7 +66,7 @@ export function StorageScene() {
       {[0, 1, 2, 3].map((i) => (
         <g key={i}>
           <Cylinder id={`st-${i}`} x={-25} y={5} z={i * 22} r={50} h={15} color={i === 3 ? K.brand : K.chassis} />
-          <Led p={[-25 + 46, 5, i * 22 + 8]} color={i === 1 ? K.amber : K.lime} pulse={i % 2 === 0} />
+          <Led p={[-25 + 46, 5, i * 22 + 8]} color={i === 1 ? K.cyan : K.lime} pulse={i % 2 === 0} />
         </g>
       ))}
       {/* platter highlight on top */}
@@ -216,7 +216,7 @@ export function ContainersScene() {
       </g>
       <g className="iso-float iso-float-2">
         <Box x={-104} y={56} z={30} w={22} d={22} h={22} color={K.slate} />
-        <Led p={[-93, 67, 53]} color={K.amber} />
+        <Led p={[-93, 67, 53]} color={K.cyan} />
       </g>
       <Beam a={[71, -85, 40]} b={[30, -30, 92]} packet dur={2.4} />
       <Beam a={[-93, 67, 30]} b={[-30, 30, 92]} packet dur={3} delay={1.2} />
@@ -262,7 +262,7 @@ export function ManagementScene() {
       {[0, 1, 2].map((i) => (
         <g key={i} className={i === 1 ? "iso-float iso-float-2" : undefined}>
           <Box x={30 + i * 26} y={-60} z={30 + i * 6} w={20} d={30} h={4} color={K.slate} />
-          <Led p={[40 + i * 26, -50, 35 + i * 6]} color={i === 2 ? K.amber : K.lime} pulse={i === 0} />
+          <Led p={[40 + i * 26, -50, 35 + i * 6]} color={i === 2 ? K.cyan : K.lime} pulse={i === 0} />
         </g>
       ))}
       <Beam a={[0, -70, 80]} b={[0, 20, 16]} opacity={0.3} packet dur={2.5} />

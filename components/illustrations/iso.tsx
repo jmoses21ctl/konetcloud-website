@@ -134,7 +134,7 @@ export function Floor({ size = 312, step = 24, opacity = 0.26 }: { size?: number
     lines.push(<polyline key={`b${i}`} points={pts([[-size, i, 0], [size, i, 0]])} />);
   }
   return (
-    <g fill="none" stroke="#8FD6FF" strokeOpacity={opacity} strokeWidth={0.5} mask="url(#iso-fade)">
+    <g fill="none" stroke="#FFD86B" strokeOpacity={opacity} strokeWidth={0.5} mask="url(#iso-fade)">
       {lines}
     </g>
   );
@@ -152,7 +152,7 @@ export function Led({ p, color = "#7AB800", r = 2.1, pulse = false }: { p: P3; c
 }
 
 /** Straight beam between two points with an optional travelling packet. */
-export function Beam({ a, b, color = "#8FD6FF", opacity = 0.55, packet = false, dur = 3, delay = 0, width = 1.4 }: { a: P3; b: P3; color?: string; opacity?: number; packet?: boolean; dur?: number; delay?: number; width?: number }) {
+export function Beam({ a, b, color = "#FFD86B", opacity = 0.55, packet = false, dur = 3, delay = 0, width = 1.4 }: { a: P3; b: P3; color?: string; opacity?: number; packet?: boolean; dur?: number; delay?: number; width?: number }) {
   const [x1, y1] = iso(a);
   const [x2, y2] = iso(b);
   const d = `M${x1},${y1} L${x2},${y2}`;
@@ -173,9 +173,9 @@ export function SceneDefs({ id }: { id: string }) {
   return (
     <defs>
       <radialGradient id={`${id}-glow`} cx="50%" cy="50%" r="50%">
-        <stop offset="0" stopColor="#02A4EE" stopOpacity={0.5} />
-        <stop offset="0.6" stopColor="#02A4EE" stopOpacity={0.12} />
-        <stop offset="1" stopColor="#02A4EE" stopOpacity={0} />
+        <stop offset="0" stopColor="#F5B400" stopOpacity={0.5} />
+        <stop offset="0.6" stopColor="#F5B400" stopOpacity={0.12} />
+        <stop offset="1" stopColor="#F5B400" stopOpacity={0} />
       </radialGradient>
       <radialGradient id="iso-fade-g" cx="50%" cy="50%" r="50%">
         <stop offset="0.12" stopColor="#fff" />
@@ -210,12 +210,12 @@ export const K = {
   chassis: "#23242b",
   chassisDark: "#15161b",
   slate: "#33353f",
-  brand: "#02A4EE",
-  deep: "#0B6FD6",
-  soft: "#8FD6FF",
-  glass: "rgb(143 214 255 / 0.10)",
-  glassLine: "rgb(143 214 255 / 0.45)",
+  brand: "#F5B400",
+  deep: "#E07B12",
+  soft: "#FFD86B",
+  glass: "rgb(255 216 107 / 0.10)",
+  glassLine: "rgb(255 216 107 / 0.45)",
   lime: "#7AB800",
-  amber: "#F5B400",
+  cyan: "#02A4EE",
   magenta: "#E4207F",
 };

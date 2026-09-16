@@ -32,9 +32,9 @@ export function KonetMark({ id = "kc", className, ...props }: MarkProps) {
           y2="32"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#8FD6FF" />
-          <stop offset=".5" stopColor="#02A4EE" />
-          <stop offset="1" stopColor="#0B6FD6" />
+          <stop stopColor="#FFD86B" />
+          <stop offset=".5" stopColor="#F5B400" />
+          <stop offset="1" stopColor="#E07B12" />
         </linearGradient>
         <mask id={mask}>
           <rect width="40" height="40" fill="#fff" />

@@ -39,7 +39,7 @@ export function LinkCard({
       {(Icon || tag) && (
         <div className="flex items-start justify-between">
           {Icon ? (
-            <span className="flex size-10 items-center justify-center rounded-lg border border-line bg-ink text-paper-2 transition-[color,border-color,box-shadow] duration-500 group-hover:border-brand/40 group-hover:text-brand group-hover:shadow-[0_0_24px_-6px_rgb(2_164_238/0.6)]">
+            <span className="flex size-10 items-center justify-center rounded-lg border border-line bg-ink text-paper-2 transition-[color,border-color,box-shadow] duration-500 group-hover:border-brand/40 group-hover:text-brand group-hover:shadow-[0_0_24px_-6px_rgb(245_180_0/0.6)]">
               <Icon className="size-5" />
             </span>
           ) : (

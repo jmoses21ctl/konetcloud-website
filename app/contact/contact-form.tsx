@@ -61,7 +61,7 @@ export function ContactForm({ defaultTopic }: { defaultTopic: string }) {
       </Field>
 
       {!state.ok && state.message && (
-        <p role="alert" className="font-mono text-[12px] text-amber">{state.message}</p>
+        <p role="alert" className="font-mono text-[12px] text-magenta">{state.message}</p>
       )}
 
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
@@ -78,7 +78,7 @@ export function ContactForm({ defaultTopic }: { defaultTopic: string }) {
 
 const input =
   "w-full rounded-lg border border-line bg-ink-2 px-3.5 py-2.5 text-[14px] text-paper transition-colors placeholder:text-paper-3 hover:border-line-strong focus:border-brand focus:outline-none";
-const invalid = "border-amber/60";
+const invalid = "border-magenta/60";
 
 function Field({
   label,
@@ -100,7 +100,7 @@ function Field({
         {hint && <span className="font-mono text-[10.5px] text-paper-3">{hint}</span>}
       </label>
       {children}
-      {error && <p className="font-mono text-[11.5px] text-amber">{error}</p>}
+      {error && <p className="font-mono text-[11.5px] text-magenta">{error}</p>}
     </div>
   );
 }

@@ -3,7 +3,8 @@
 /* ---------------------------------------------------------------------------
  * Design tokens
  * Palette is derived from 21st Century Technologies' four-colour mark:
- * cyan (primary), amber, lime, magenta — used as signal colours on black.
+ * amber/gold (primary), cyan, lime, magenta — the latter three used as
+ * signal colours on black.
  * ------------------------------------------------------------------------- */
 @theme {
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
@@ -17,11 +18,11 @@
   --color-paper-2: #a1a1aa;
   --color-paper-3: #6b6b73;
 
-  --color-brand: #02a4ee;
-  --color-brand-deep: #0b6fd6;
-  --color-brand-soft: #8fd6ff;
+  --color-brand: #f5b400;
+  --color-brand-deep: #e07b12;
+  --color-brand-soft: #ffd86b;
 
-  --color-amber: #f5b400;
+  --color-cyan: #02a4ee;
   --color-lime: #7ab800;
   --color-magenta: #e4207f;
 
@@ -375,7 +376,7 @@
   opacity: 0;
   background: radial-gradient(
     360px circle at var(--mx, 50%) var(--my, 50%),
-    rgb(2 164 238 / 0.14),
+    rgb(245 180 0 / 0.14),
     transparent 45%
   );
   transition: opacity 0.5s var(--ease-out-quart);
