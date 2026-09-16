@@ -36,7 +36,7 @@ export function HeroConsole() {
         {/* Activity log */}
         <pre className="min-w-0 overflow-x-auto p-5 font-mono text-[14px] leading-[1.75] text-fg-2 sm:p-6 sm:text-[15px]">
           <Line prompt index={0}>
-            create vm <Arg>app-web-01</Arg> --zone <Arg>lekki</Arg> --family{" "}
+            create vm <Arg>app-web-01</Arg> --zone <Arg>zone-b</Arg> --family{" "}
             <Arg>general-purpose</Arg>
           </Line>
           <Line dim index={1}>
@@ -50,7 +50,7 @@ export function HeroConsole() {
           </Line>
           <Line index={4}>
             <Ok>✓</Ok> app-web-01 is <Ok>running</Ok>{" "}
-            <span className="text-fg-3">in Availability Zone 2</span>
+            <span className="text-fg-3">in Zone B</span>
           </Line>
           <Line prompt index={5}>
             <span className="animate-caret inline-block h-[1.1em] w-[0.55em] translate-y-[0.2em] bg-brand" />
@@ -79,9 +79,16 @@ export function HeroConsole() {
                 <span className="font-mono text-[13.5px] text-lime">healthy</span>
               </li>
             ))}
+            <li className="flex items-center justify-between rounded-lg px-3 py-2.5 text-fg-3">
+              <div className="flex items-center gap-3">
+                <span aria-hidden="true" className="size-1.5 rounded-full border border-fg-3" />
+                <span className="font-mono text-[12.5px]">+ additional zones</span>
+              </div>
+              <span className="font-mono text-[13.5px]">…</span>
+            </li>
           </ul>
           <div className="border-t border-line px-5 py-3 font-mono text-[12.5px] text-fg-3">
-            Traffic is distributed to healthy zones
+            Traffic is distributed across all healthy zones
           </div>
         </div>
       </div>

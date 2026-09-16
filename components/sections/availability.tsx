@@ -2,7 +2,13 @@ import { ArchitectureDiagram } from "@/components/sections/architecture";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { availabilityAttributes, availabilityZones } from "@/lib/trust";
+import { availabilityAttributes } from "@/lib/trust";
+
+const principles = [
+  { title: "Independent locations", copy: "Zones are physically separate, so a fault in one does not affect another." },
+  { title: "Redundant inter-zone paths", copy: "Every zone connects to every other zone; no single site is a transit dependency." },
+  { title: "Health-based distribution", copy: "Traffic is steered only to zones and resources that pass health checks." },
+];
 
 export function Availability() {
   return (
@@ -19,18 +25,17 @@ export function Availability() {
           </Reveal>
 
           <Reveal as="ul" variant="up" className="flex flex-col divide-y divide-line border-y border-line">
-            {availabilityZones.map((z, i) => (
+            {principles.map((p, i) => (
               <li
-                key={z.id}
-                className="stagger flex items-center justify-between py-4"
+                key={p.title}
+                className="stagger flex items-start gap-4 py-4"
                 style={{ "--i": i } as React.CSSProperties}
               >
-                <span className="font-mono text-[12px] tracking-[0.12em] text-fg-3 uppercase">
-                  {z.label}
-                </span>
-                <span className="text-[15px] font-semibold tracking-[-0.01em] text-fg">
-                  {z.name}
-                </span>
+                <span className="mt-1 font-mono text-[13px] text-brand">0{i + 1}</span>
+                <div>
+                  <p className="text-[17px] font-semibold tracking-[-0.01em] text-fg">{p.title}</p>
+                  <p className="mt-1 text-[16px] leading-relaxed text-fg-2">{p.copy}</p>
+                </div>
               </li>
             ))}
           </Reveal>

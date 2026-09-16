@@ -4,7 +4,6 @@ import { GoldenBackdrop } from "@/components/sections/golden-backdrop";
 import { HeroConsole } from "@/components/sections/hero-console";
 import { HeroNetwork } from "@/components/sections/hero-network";
 import { Button } from "@/components/ui/button";
-import { CountUp } from "@/components/ui/count-up";
 import { featuredFamilySlugs, getFamily } from "@/lib/products";
 import { site } from "@/lib/site";
 import { availabilityAttributes } from "@/lib/trust";
@@ -34,7 +33,7 @@ export function Hero() {
             <span className="animate-pulse-dot absolute inset-0 rounded-full bg-lime" />
             <span className="relative size-1.5 rounded-full bg-lime" />
           </span>
-          Three availability zones in Lagos
+          Multiple availability zones in Lagos
           <span aria-hidden="true" className="h-3 w-px bg-line-strong" />
           <span className="font-mono text-[12.5px] tracking-wide text-fg-3 uppercase transition-colors group-hover:text-fg-2">
             by 21CTL
@@ -131,14 +130,10 @@ export function Hero() {
           className="rise mt-14 grid w-full max-w-5xl grid-cols-2 gap-y-8 md:grid-cols-4 md:gap-y-0"
           style={{ "--i": 8, "--d": "160ms" } as React.CSSProperties}
         >
-          <Stat
-            index={1}
-            value={<CountUp to={3} prefix="0" duration={1200} />}
-            label={availabilityAttributes[0]}
-          />
+          <Stat index={1} value="Multi-AZ" label={availabilityAttributes[0]} />
           <Stat index={2} value="N+1" label={availabilityAttributes[1]} />
           <Stat index={3} value="Health" label={availabilityAttributes[2]} />
-          <Stat index={4} value="Multi-AZ" label={availabilityAttributes[3]} />
+          <Stat index={4} value="Resilient" label={availabilityAttributes[3]} />
         </dl>
       </div>
     </section>

@@ -34,7 +34,7 @@ export function ArchitectureDiagram({ className }: { className?: string }) {
     >
       <figcaption className="flex flex-wrap items-center justify-between gap-2 font-mono text-[12.5px] tracking-[0.12em] text-fg-3 uppercase">
         <span>KonetCloud Multi‑Site Availability Architecture</span>
-        <span>Logical view</span>
+        <span>Representative logical view</span>
       </figcaption>
 
       <div className="mt-5 flex flex-col gap-3">

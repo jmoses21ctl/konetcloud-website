@@ -69,7 +69,7 @@ export default async function ProductFamilyPage({
         </Reveal>
       </Section>
 
-      <Section index="02" eyebrow="How it works" title="Designed across three availability zones" description="Deploy across independent zones with health-based traffic distribution. The diagram shows the logical platform layers; detailed topology is available to customers through the appropriate controlled process.">
+      <Section index="02" eyebrow="How it works" title="Designed across multiple availability zones" description="Deploy across independent zones with health-based traffic distribution. The diagram shows the logical platform layers; detailed topology is available to customers through the appropriate controlled process.">
         <div className="grid gap-10 lg:grid-cols-[2fr_3fr] lg:gap-14">
           <Reveal as="ul" variant="up" className="flex flex-col divide-y divide-line border-y border-line">
             {f.covers.map((c, i) => (

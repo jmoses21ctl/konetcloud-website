@@ -11,7 +11,7 @@ import { PageHero } from "@/components/ui/page-hero";
 import { Reveal } from "@/components/ui/reveal";
 import { Section } from "@/components/ui/section";
 import { site } from "@/lib/site";
-import { availabilityZones, sovereigntyWording, trustAreas } from "@/lib/trust";
+import { sovereigntyWording, trustAreas } from "@/lib/trust";
 
 export const metadata: Metadata = {
   title: "Trust",
@@ -41,18 +41,20 @@ export default function TrustPage() {
         </Reveal>
       </Section>
 
-      <Section index="02" eyebrow="Resilience" title="Three peer availability zones" description="Public architecture is shown at a logical level: zones, redundant paths, service layers and control boundaries. Device topology, addressing and internal dependencies are shared with authorised assessors and customers through a controlled process.">
+      <Section index="02" eyebrow="Resilience" title="Multiple peer availability zones" description="Public architecture is shown at a logical level: zones, redundant paths, service layers and control boundaries. Device topology, addressing and internal dependencies are shared with authorised assessors and customers through a controlled process.">
         <div className="grid gap-10 lg:grid-cols-[2fr_3fr]">
           <Reveal as="ul" variant="up" className="flex flex-col divide-y divide-line border-y border-line">
-            {availabilityZones.map((z, i) => (
-              <li key={z.id} className="stagger flex items-center justify-between py-4" style={{ "--i": i } as React.CSSProperties}>
-                <span className="font-mono text-[12px] tracking-[0.12em] text-fg-3 uppercase">{z.label}</span>
-                <span className="text-[17px] font-semibold text-fg">{z.name}</span>
+            {[
+              "Zones are independent locations with their own power, cooling and connectivity.",
+              "Every zone connects to every other zone over redundant paths; no single zone is a transit dependency.",
+              "Workloads can be deployed across zones so that a zone-level event does not interrupt service.",
+              "Zone locations and detailed topology are shared with customers and assessors through a controlled process.",
+            ].map((t, i) => (
+              <li key={t} className="stagger flex items-start gap-4 py-4" style={{ "--i": i } as React.CSSProperties}>
+                <span className="mt-0.5 font-mono text-[13px] text-brand">0{i + 1}</span>
+                <span className="text-[16px] leading-relaxed text-fg-2">{t}</span>
               </li>
             ))}
-            <li className="stagger py-4 text-[15px] leading-relaxed text-fg-2" style={{ "--i": 3 } as React.CSSProperties}>
-              All three locations are presented as equal availability zones with alternate inter-zone paths. No single zone is a transit dependency.
-            </li>
           </Reveal>
           <Reveal variant="right"><ArchitectureDiagram /></Reveal>
         </div>

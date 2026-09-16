@@ -11,10 +11,15 @@ export const trustAreas = [
 export const sovereigntyWording =
   "Designed for sovereign and regulated workloads, and built to support data residency and sovereign cloud requirements.";
 
+/**
+ * Representative zones for diagrams and demos. Deliberately unnamed and
+ * un-numbered: the public site describes a multi-zone architecture, not a
+ * count or list of physical sites.
+ */
 export const availabilityZones = [
-  { id: "az1", name: "Saka Tinubu", label: "Availability Zone 1" },
-  { id: "az2", name: "Lekki", label: "Availability Zone 2" },
-  { id: "az3", name: "Ikeja", label: "Availability Zone 3" },
+  { id: "az-a", name: "Zone A", label: "Availability zone" },
+  { id: "az-b", name: "Zone B", label: "Availability zone" },
+  { id: "az-c", name: "Zone C", label: "Availability zone" },
 ] as const;
 
 export const availabilityAttributes = [
